@@ -10,6 +10,22 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# Collections for organized content
+collections:
+  poems:
+    output: true
+    permalink: /:collection/:name/
+  stories:
+    output: true  
+    permalink: /:collection/:name/
+  reflections:
+    output: true
+    permalink: /:collection/:name/
+
+# Tag settings
+tag_page_layout: tag_page
+tag_page_dir: themes
+
 # Build settings
 markdown: kramdown
 highlighter: rouge

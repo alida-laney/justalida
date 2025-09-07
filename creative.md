@@ -12,7 +12,9 @@ Art has been my companion through transformation—sometimes the only language a
 
 Words arranged in patterns that hopefully resonate, drawn from the deep well of experience. Some pieces live openly here, others reward the dedicated explorer.
 
-*First poems coming soon*
+{% for poem in site.poems %}
+- [{{ poem.title }}]({{ poem.url | relative_url }}) *{{ poem.excerpt }}*
+{% endfor %}
 
 ---
 
