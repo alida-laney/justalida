@@ -5,22 +5,22 @@ url: "https://justalida.com"
 
 theme: minima
 
+# Header navigation order
+header_pages:
+  - index.md
+  - creations.md
+  - misc.md
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Collections for organized content
+# Unified content collection
 collections:
-  poems:
+  content:
     output: true
-    permalink: /:collection/:name/
-  stories:
-    output: true  
-    permalink: /:collection/:name/
-  reflections:
-    output: true
-    permalink: /:collection/:name/
+    permalink: /:title/
 
 # Tag settings
 tag_page_layout: tag_page

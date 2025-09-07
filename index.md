@@ -1,18 +1,30 @@
 ---
-title: Hello there folks!
-layout: home
+title: Welcome
+layout: page
+nav_order: 1
 ---
 
-Welcome to justalida.com! 
+My name is Alida. If you've somehow found this site, you're welcome to poke around, although it is heavily under construction.  
 
-This is the homepage of your Jekyll site. You should now see the Minima theme with navigation, your posts listed below, and a proper layout.
+All the below text was Claude-Code-Generated & will likely not remain as-is for very long, but I am appreciative of my coding companion, so it's staying for now :)
 
-## About This Site
+## Professionally
+I'm a biologist-turned-programmer, drawn to the elegance of systems—whether cellular mechanisms or clean code. My foundation in evidence-based thinking keeps me grounded while navigating complexity. I build things that matter, solve problems that need solving, and approach technical challenges with both rigor and creativity.
 
-This site is built with Jekyll and hosted on GitHub Pages. You can:
+## Personally  
+I believe in the power of authentic connection and the courage it takes to be vulnerable. My path has been unconventional, marked by deep learning through experience rather than textbooks. I've learned that joy and groundedness are possible even after—especially after—walking through difficult terrain.
 
-- Write blog posts in the `_posts/` directory
-- Customize the design by editing `assets/css/main.scss`
-- Add pages by creating new `.md` files
+## What You'll Find Here
+This site is designed for exploration at whatever depth feels right for you:
 
-Check out your existing posts below!
+- **Surface level**: My technical projects, creative work, and upcoming events
+- **Deeper waters**: Personal stories, reflections, and resources for those on similar journeys
+- **Hidden treasures**: For the curious souls willing to solve puzzles and follow threads
+
+I'm working on an app, writing poetry, performing when the spirit moves me, and always seeking authentic connection with fellow travelers.
+
+---
+
+*"The cave you fear to enter holds the treasure you seek."* — Joseph Campbell
+
+[Curious about the journey? • Explore my creations](/creations/)

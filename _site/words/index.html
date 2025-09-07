@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Words were my refuge." />
 <meta property="og:description" content="Words were my refuge." />
-<link rel="canonical" href="http://0.0.0.0:4000/poems/words/" />
-<meta property="og:url" content="http://0.0.0.0:4000/poems/words/" />
+<link rel="canonical" href="http://0.0.0.0:4000/words/" />
+<meta property="og:url" content="http://0.0.0.0:4000/words/" />
 <meta property="og:site_name" content="justalida" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-01T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Words" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-01T00:00:00-05:00","datePublished":"2023-03-01T00:00:00-05:00","description":"Words were my refuge.","headline":"Words","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/poems/words/"},"url":"http://0.0.0.0:4000/poems/words/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-01T00:00:00-05:00","datePublished":"2023-03-01T00:00:00-05:00","description":"Words were my refuge.","headline":"Words","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/words/"},"url":"http://0.0.0.0:4000/words/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="justalida" /></head>
 <body><header class="site-header" role="banner">
@@ -32,22 +32,24 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/calendar/">Calendar</a><a class="page-link" href="/creative/">Creative</a><a class="page-link" href="/">Hello there folks!</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/reflections/">Reflections</a><a class="page-link" href="/resources/">Resources</a><a class="page-link" href="/stories/">Stories</a><a class="page-link" href="/themes/">Explore by Theme</a></div>
+        <div class="trigger"><a class="page-link" href="/">Welcome</a><a class="page-link" href="/creations/">Creations</a><a class="page-link" href="/misc/">Miscellaneous</a></div>
       </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="poem h-entry" itemscope itemtype="http://schema.org/CreativeWork">
+        <article class="content content-poem h-entry" itemscope itemtype="http://schema.org/CreativeWork">
 
-  <header class="poem-header">
-    <h1 class="poem-title">Words</h1>
-    <p class="poem-meta">
+  <header class="content-header poem-header">
+    <h1 class="content-title poem-title">Words</h1>
+    
+    <div class="content-meta">
       <time class="dt-published" datetime="2023-03-01T00:00:00-05:00" itemprop="datePublished">March 2023
       </time>
-    </p>
+      
+      
+    </div>
   </header>
 
-  <div class="poem-content e-content" itemprop="text">
+  <div class="content-body poem-content" itemprop="text">
     <p>When I was a child,<br />
 Words were my refuge.<br />
 Words on a page, in my head, or, rarely, whispered aloud<br />
@@ -95,12 +97,15 @@ Forever is just a word, too</p>
 
 <p>#language #meaning #change #healing #processing</p>
 
-  </div><div class="poem-tags">
+  </div>
+
+  <div class="content-tags">
     <p><strong>Themes:</strong><a href="/themes-language/" class="tag-link">#language</a>,<a href="/themes-meaning/" class="tag-link">#meaning</a>,<a href="/themes-change/" class="tag-link">#change</a>,<a href="/themes-healing/" class="tag-link">#healing</a>,<a href="/themes-processing/" class="tag-link">#processing</a></p>
-  </div><a class="u-url" href="/poems/words/" hidden></a>
+  </div><a class="u-url" href="/words/" hidden></a>
 </article>
 
 <style>
+/* Poem-specific styling */
 .poem-title {
   font-size: 2.5em;
   font-weight: bold;
@@ -109,7 +114,7 @@ Forever is just a word, too</p>
   text-align: center;
 }
 
-.poem-meta {
+.poem-header .content-meta {
   text-align: center;
   color: #666;
   font-style: italic;
@@ -123,7 +128,79 @@ Forever is just a word, too</p>
   font-size: 1.1em;
 }
 
-.poem-tags {
+/* Story-specific styling */
+.story-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.story-content {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+/* Mixed media styling */
+.content-types {
+  margin-left: 1em;
+}
+
+.type-badge {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin-right: 0.3em;
+}
+
+/* Companions section */
+.companions {
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid #e8e8e8;
+}
+
+.companion-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.companion-link {
+  display: block;
+  padding: 1em;
+  background: #f8f8f8;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.companion-link:hover {
+  background: #e8e8e8;
+  text-decoration: none;
+}
+
+.companion-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.companion-type {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Tags styling */
+.content-tags {
   margin-top: 3em;
   padding-top: 2em;
   border-top: 1px solid #e8e8e8;

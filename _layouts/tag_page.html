@@ -8,11 +8,9 @@ layout: default
   <p class="tag-description">{{ page.description | default: "All content tagged with this theme." }}</p>
 
   {%- assign tagged_posts = site.posts | where: "tags", page.tag -%}
-  {%- assign tagged_poems = site.poems | where: "tags", page.tag -%}
-  {%- assign tagged_stories = site.stories | where: "tags", page.tag -%}
-  {%- assign tagged_reflections = site.reflections | where: "tags", page.tag -%}
+  {%- assign tagged_content = site.content | where: "tags", page.tag -%}
 
-  {%- assign all_tagged = tagged_posts | concat: tagged_poems | concat: tagged_stories | concat: tagged_reflections | sort: 'date' | reverse -%}
+  {%- assign all_tagged = tagged_posts | concat: tagged_content | sort: 'date' | reverse -%}
 
   {%- if all_tagged.size > 0 -%}
     <ul class="post-list">
@@ -20,7 +18,9 @@ layout: default
       <li>
         <span class="post-meta">
           {{ item.date | date: site.minima.date_format }}
-          {%- if item.collection -%}
+          {%- if item.collection == 'content' and item.type.size > 0 -%}
+            • <em>{{ item.type | join: ", " | capitalize }}</em>
+          {%- elsif item.collection -%}
             • <em>{{ item.collection | capitalize }}</em>
           {%- endif -%}
         </span>
@@ -50,7 +50,7 @@ layout: default
   {%- endif -%}
 
   <div class="tag-navigation">
-    <p><a href="{{ '/themes/' | relative_url }}">← Browse all themes</a></p>
+    <p><a href="{{ '/creations/' | relative_url }}">← Browse all creations</a></p>
   </div>
 </div>
 
