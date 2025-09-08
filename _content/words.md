@@ -47,7 +47,7 @@ I am not sure I've ever felt before
 
 I was never safe to feel  
 I was never free from danger  
-I stored my harm inside words and locked them away  
+I stored my harm inside words and [locked them away](/hidden-codex/)  
 Thinking the words would hold that feeling forever  
 
 But, as it turns out,  

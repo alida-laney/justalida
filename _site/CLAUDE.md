@@ -11,9 +11,10 @@ This file contains context and todos for working on Alida's personal website.
 ## Current Site Structure
 
 ### Navigation
-- **About** (`/about/`) - Layered personal introduction
+- **Welcome** (`/`) - Homepage with personal introduction (replaced About page)
 - **Creations** (`/creations/`) - Main hub with dynamic filtering (was theme exploration page)
-- **Misc** (`/misc/`) - Calendar, services, contact info
+- **Miscellaneous** (`/misc/`) - Calendar, services, contact info
+- **Treasure Map** (`/treasure-map/`) - Tracks discovered hidden content (appears after first unlock)
 
 ### Key Features
 
@@ -39,6 +40,14 @@ This file contains context and todos for working on Alida's personal website.
 - **Poem-specific styling**: Centered, larger fonts, special formatting
 - **Project styling**: Technical appearance
 - **Visual-art styling**: Gallery-focused layout
+- **Protected layout**: `_layouts/protected.html` for riddle-based password protection
+
+#### 5. Hidden Treasure System 🎯
+- **Password-protected content**: Client-side riddle system for special pieces
+- **Progressive discovery**: Subtle links and clues throughout existing content
+- **Treasure tracking**: JavaScript-based progress tracking with localStorage
+- **Interactive experiences**: Breathing exercises, binary meditations, etc.
+- **Reward system**: Notifications, treasure counter, and treasure map page
 
 ## Content Structure
 
@@ -47,13 +56,29 @@ This file contains context and todos for working on Alida's personal website.
 ---
 title: "Content Title"
 type: [poem, project, visual-art, story, reflection]  # Can have multiple types
-layout: content
+layout: content  # or 'protected' for hidden treasures
 date: YYYY-MM-DD
 tags: [theme1, theme2, theme3]
 excerpt: "Brief description"
 content_id: "unique-id-001"
 companions: [related-content-id-001, related-content-id-002]  # Optional
-visibility: public  # For future riddle system
+visibility: public  # or 'protected' for hidden content
+---
+```
+
+### Protected Content Format
+```yaml
+---
+title: "Hidden Treasure"
+type: [poem]
+layout: protected
+tags: [hidden-treasures]
+content_id: "hidden-example-001"
+visibility: protected
+password: "answer1|answer2|answer3"  # Multiple acceptable answers
+riddle: "Your riddle text here"
+hint: "Optional hint text"
+unlocked_message: "Celebration message when unlocked"
 ---
 ```
 
@@ -62,18 +87,54 @@ visibility: public  # For future riddle system
 - **Blog posts**: `_posts/` (traditional Jekyll posts)
 - **Static pages**: Root directory (about.md, creations.md, misc.md)
 
+## Hidden Treasure System Details
+
+### Current Hidden Treasures
+1. **"Hidden Depths"** (`/hidden-depths/`) - Poem about courage, riddle about Joseph Campbell quote
+2. **"The Codex Project"** (`/hidden-codex/`) - Technical reflection on binary systems  
+3. **"The Digital Sanctuary"** (`/hidden-sanctuary/`) - Interactive breathing meditation space
+
+### Discovery Paths
+- **Homepage**: "cave you fear to enter" links to first treasure
+- **Words poem**: "locked them away" links to second treasure  
+- **Treasure map**: "seek sanctuary" links to third treasure
+
+### Technical Components
+- **`_layouts/protected.html`**: Riddle-based password protection layout
+- **`assets/js/treasure-tracker.js`**: Progress tracking and notifications system
+- **`treasure-map.md`**: Dynamic treasure map with progressive hints
+- **`_includes/header.html`**: Custom navigation with treasure counter
+- **`_layouts/default.html`**: Includes treasure tracker JavaScript
+
+### User Experience Flow
+1. Discover subtle link → Encounter riddle → Solve puzzle → Unlock content
+2. Get notification → See treasure counter update → Access treasure map  
+3. Receive progressive hints → Continue exploration → Find more treasures
+
 ## Current Todos
 
 ### Active
-1. **Design riddle/puzzle system for unlocking deeper content** - Create a way to hide certain content behind riddles/puzzles that reward dedicated exploration
+- No active todos (treasure system complete!)
 
 ### Completed Recently
 - ✅ Unified content backend with type-based filtering
 - ✅ Dynamic creations page with dropdown filters  
 - ✅ Simplified Theme + Content Type filtering (removed redundant media field)
-- ✅ Clean navigation structure (About, Creations, Misc)
+- ✅ Clean navigation structure (Welcome, Creations, Miscellaneous)
 - ✅ Companion piece relationship system
 - ✅ Custom domain setup and automated deployment
+- ✅ Complete hidden treasure hunting system with riddles and progress tracking
+- ✅ Interactive protected content with JavaScript-based unlocking
+- ✅ Homepage restructured with personal introduction
+
+### Future Treasure Expansion Ideas
+- **Multi-step puzzles**: Treasures that require solving multiple riddles in sequence
+- **Time-based unlocks**: Content that appears only at certain times/dates
+- **Collaborative treasures**: Puzzles that require multiple people to solve
+- **Seasonal content**: Hidden pieces that relate to current events or seasons
+- **Interactive storytelling**: Choose-your-own-adventure style hidden narratives
+- **Art generation**: Hidden tools for creating visual art or poetry
+- **Community features**: Guest book or message system for fellow treasure hunters
 
 ## Technical Notes
 

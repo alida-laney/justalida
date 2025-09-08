@@ -32,7 +32,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/">Welcome</a><a class="page-link" href="/creations/">Creations</a><a class="page-link" href="/misc/">Miscellaneous</a></div>
+        <div class="trigger"><a class="page-link" href="/treasure-map/">Treasure Map</a><a class="page-link" href="/">Welcome</a><a class="page-link" href="/creations/">Creations</a><a class="page-link" href="/misc/">Miscellaneous</a></div>
       </nav></div>
 </header><main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -232,6 +232,14 @@
   </div>
 
 </footer>
-</body>
+<script src="/assets/js/treasure-tracker.js"></script>
+    <script>
+      // Initialize treasure counter in navigation
+      document.addEventListener('DOMContentLoaded', function() {
+        addTreasureCounter();
+      });
+    </script>
+
+  </body>
 
 </html>

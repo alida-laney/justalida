@@ -25,6 +25,6 @@ I'm working on an app, writing poetry, performing when the spirit moves me, and 
 
 ---
 
-*"The cave you fear to enter holds the treasure you seek."* — Joseph Campbell
+*"The [cave you fear to enter](/hidden-depths/) holds the treasure you seek."* — Joseph Campbell
 
 [Curious about the journey? • Explore my creations](/creations/)

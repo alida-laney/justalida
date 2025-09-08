@@ -31,7 +31,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/">Welcome</a><a class="page-link" href="/creations/">Creations</a><a class="page-link" href="/misc/">Miscellaneous</a></div>
+        <div class="trigger"><a class="page-link" href="/treasure-map/">Treasure Map</a><a class="page-link" href="/">Welcome</a><a class="page-link" href="/creations/">Creations</a><a class="page-link" href="/misc/">Miscellaneous</a></div>
       </nav></div>
 </header><main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -78,12 +78,17 @@
           
           
           
-          <option value="healing">Healing (1)</option>
+          <option value="healing">Healing (3)</option>
         
           
           
           
           <option value="healing-tech">Healing-tech (1)</option>
+        
+          
+          
+          
+          <option value="hidden-treasures">Hidden-treasures (3)</option>
         
           
           
@@ -108,7 +113,27 @@
           
           
           
-          <option value="technical-projects">Technical-projects (1)</option>
+          <option value="sanctuary">Sanctuary (1)</option>
+        
+          
+          
+          
+          <option value="systems">Systems (1)</option>
+        
+          
+          
+          
+          <option value="technical-projects">Technical-projects (2)</option>
+        
+          
+          
+          
+          <option value="technology">Technology (1)</option>
+        
+          
+          
+          
+          <option value="transformation">Transformation (1)</option>
         
           
           
@@ -126,13 +151,16 @@
         
         
           
-          <option value="poem">Poem (1)</option>
+          <option value="poem">Poem (2)</option>
         
           
-          <option value="project">Project (1)</option>
+          <option value="project">Project (2)</option>
         
           
-          <option value="visual-art">Visual-art (1)</option>
+          <option value="reflection">Reflection (1)</option>
+        
+          
+          <option value="visual-art">Visual-art (2)</option>
         
         <option value="blog-post">Blog Post (2)</option>
       </select>
@@ -148,6 +176,80 @@
 <h2 id="latest-creations">Latest Creations</h2>
 
 <div class="creations-list">
+  
+  <article class="creation-item" data-tags="healing technology hidden-treasures sanctuary " data-type="reflection visual-art ">
+    <header class="creation-header">
+      <h3><a href="/hidden-sanctuary/">The Digital Sanctuary</a></h3>
+      <div class="creation-meta">
+        September 2025
+        
+          • <span class="creation-type">Reflection, visual-art</span>
+        
+      </div>
+    </header>
+    
+      <p class="creation-excerpt">A hidden interactive meditation space</p>
+    
+    <div class="creation-tags">
+      
+        <span class="mini-tag" data-tag="healing">#healing</span>
+      
+        <span class="mini-tag" data-tag="technology">#technology</span>
+      
+        <span class="mini-tag" data-tag="hidden-treasures">#hidden-treasures</span>
+      
+        <span class="mini-tag" data-tag="sanctuary">#sanctuary</span>
+      
+    </div>
+  </article>
+  
+  <article class="creation-item" data-tags="healing transformation hidden-treasures " data-type="poem ">
+    <header class="creation-header">
+      <h3><a href="/hidden-depths/">Hidden Depths</a></h3>
+      <div class="creation-meta">
+        September 2025
+        
+          • <span class="creation-type">Poem</span>
+        
+      </div>
+    </header>
+    
+      <p class="creation-excerpt">A protected piece about finding strength in vulnerability</p>
+    
+    <div class="creation-tags">
+      
+        <span class="mini-tag" data-tag="healing">#healing</span>
+      
+        <span class="mini-tag" data-tag="transformation">#transformation</span>
+      
+        <span class="mini-tag" data-tag="hidden-treasures">#hidden-treasures</span>
+      
+    </div>
+  </article>
+  
+  <article class="creation-item" data-tags="technical-projects hidden-treasures systems " data-type="project ">
+    <header class="creation-header">
+      <h3><a href="/hidden-codex/">The Codex Project</a></h3>
+      <div class="creation-meta">
+        September 2025
+        
+          • <span class="creation-type">Project</span>
+        
+      </div>
+    </header>
+    
+      <p class="creation-excerpt">A hidden technical project about the beauty of binary systems</p>
+    
+    <div class="creation-tags">
+      
+        <span class="mini-tag" data-tag="technical-projects">#technical-projects</span>
+      
+        <span class="mini-tag" data-tag="hidden-treasures">#hidden-treasures</span>
+      
+        <span class="mini-tag" data-tag="systems">#systems</span>
+      
+    </div>
+  </article>
   
   <article class="creation-item" data-tags="" data-type="blog-post">
     <header class="creation-header">
@@ -581,6 +683,14 @@ function clearAllFilters() {
   </div>
 
 </footer>
-</body>
+<script src="/assets/js/treasure-tracker.js"></script>
+    <script>
+      // Initialize treasure counter in navigation
+      document.addEventListener('DOMContentLoaded', function() {
+        addTreasureCounter();
+      });
+    </script>
+
+  </body>
 
 </html>

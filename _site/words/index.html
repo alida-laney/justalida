@@ -32,7 +32,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/">Welcome</a><a class="page-link" href="/creations/">Creations</a><a class="page-link" href="/misc/">Miscellaneous</a></div>
+        <div class="trigger"><a class="page-link" href="/treasure-map/">Treasure Map</a><a class="page-link" href="/">Welcome</a><a class="page-link" href="/creations/">Creations</a><a class="page-link" href="/misc/">Miscellaneous</a></div>
       </nav></div>
 </header><main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -87,7 +87,7 @@ I am not sure I’ve ever felt before</p>
 
 <p>I was never safe to feel<br />
 I was never free from danger<br />
-I stored my harm inside words and locked them away<br />
+I stored my harm inside words and <a href="/hidden-codex/">locked them away</a><br />
 Thinking the words would hold that feeling forever</p>
 
 <p>But, as it turns out,<br />
@@ -243,6 +243,14 @@ Forever is just a word, too</p>
   </div>
 
 </footer>
-</body>
+<script src="/assets/js/treasure-tracker.js"></script>
+    <script>
+      // Initialize treasure counter in navigation
+      document.addEventListener('DOMContentLoaded', function() {
+        addTreasureCounter();
+      });
+    </script>
+
+  </body>
 
 </html>

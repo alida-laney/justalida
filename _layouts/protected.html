@@ -1,0 +1,190 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div id="password-gate" class="password-gate">
+    <div class="riddle-container">
+      <h2>🔒 Protected Content</h2>
+      
+      {% if page.riddle %}
+        <div class="riddle-text">
+          <p><strong>Riddle:</strong></p>
+          <blockquote>{{ page.riddle }}</blockquote>
+        </div>
+      {% else %}
+        <p>This content is protected. Enter the password to continue.</p>
+      {% endif %}
+      
+      <div class="password-input-container">
+        <input type="password" id="password-input" placeholder="Enter your answer..." />
+        <button onclick="checkPassword()">Unlock</button>
+      </div>
+      
+      {% if page.hint %}
+        <details class="hint-container">
+          <summary>Need a hint?</summary>
+          <p>{{ page.hint }}</p>
+        </details>
+      {% endif %}
+      
+      <div id="error-message" class="error-message" style="display: none;">
+        That's not quite right. Try again, or look for clues elsewhere on the site.
+      </div>
+    </div>
+  </div>
+
+  <div id="protected-content" class="protected-content" style="display: none;">
+    <div class="post-content">
+      {{ content }}
+    </div>
+    
+    {% if page.unlocked_message %}
+      <div class="unlock-celebration">
+        <p><em>{{ page.unlocked_message }}</em></p>
+      </div>
+    {% endif %}
+  </div>
+</article>
+
+<script>
+function checkPassword() {
+  const input = document.getElementById('password-input');
+  const userInput = input.value.toLowerCase().trim();
+  const correctPassword = '{{ page.password | downcase }}';
+  
+  // Allow for multiple correct answers if specified
+  const correctAnswers = correctPassword.includes('|') 
+    ? correctPassword.split('|').map(s => s.trim())
+    : [correctPassword];
+  
+  if (correctAnswers.includes(userInput)) {
+    document.getElementById('password-gate').style.display = 'none';
+    document.getElementById('protected-content').style.display = 'block';
+    
+    // Store successful unlock in session storage
+    sessionStorage.setItem('unlocked_{{ page.content_id }}', 'true');
+    
+    // Track in treasure tracker
+    if (window.treasureTracker) {
+      window.treasureTracker.unlockTreasure('{{ page.content_id }}', '{{ page.title }}');
+    }
+    
+    // Optional celebration animation
+    const celebration = document.querySelector('.unlock-celebration');
+    if (celebration) {
+      celebration.style.animation = 'fadeIn 1s ease-in';
+    }
+    
+  } else {
+    document.getElementById('error-message').style.display = 'block';
+    input.value = '';
+    input.focus();
+    
+    // Hide error message after a few seconds
+    setTimeout(() => {
+      document.getElementById('error-message').style.display = 'none';
+    }, 3000);
+  }
+}
+
+// Check if already unlocked in this session
+document.addEventListener('DOMContentLoaded', function() {
+  if (sessionStorage.getItem('unlocked_{{ page.content_id }}') === 'true') {
+    document.getElementById('password-gate').style.display = 'none';
+    document.getElementById('protected-content').style.display = 'block';
+  }
+  
+  // Allow Enter key to submit
+  document.getElementById('password-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      checkPassword();
+    }
+  });
+});
+</script>
+
+<style>
+.password-gate {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.riddle-text blockquote {
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  border-left: 4px solid #4a90e2;
+}
+
+.password-input-container {
+  margin: 1.5rem 0;
+}
+
+.password-input-container input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 200px;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-input-container button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.password-input-container button:hover {
+  background-color: #357abd;
+}
+
+.hint-container {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.hint-container summary {
+  cursor: pointer;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.error-message {
+  color: #d32f2f;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #ffebee;
+  border-radius: 4px;
+}
+
+.unlock-celebration {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #e8f5e8;
+  border-radius: 4px;
+  color: #2e7d32;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
