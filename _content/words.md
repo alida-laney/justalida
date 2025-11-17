@@ -6,7 +6,7 @@ date: 2023-03-01
 tags: [language, meaning, change, healing, processing]
 excerpt: "Words were my refuge."
 content_id: "words-001"
-companions: []
+companions: [what-is-safe-001]
 visibility: public
 ---
 
@@ -15,14 +15,14 @@ Words were my refuge.
 Words on a page, in my head, or, rarely, whispered aloud  
 Kept me safe.  
 
-The thing about words  
-Is how absolutely concrete  
-And utterly subjective  
-The experience of a word can be  
+The thing about words
+Is how absolutely concrete
+And utterly subjective
+The experience of a word can be
 
-Safe  
-What is it to be safe?  
-It is to feel secure in your surroundings  
+<span class="whisper-link">[Safe]({% link _content/what-is-safe.md %})</span>
+What is it to be safe?
+It is to feel secure in your surroundings
 It is to be free from harm  
 
 Is that, then, really what the words did?  
