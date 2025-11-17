@@ -55,7 +55,10 @@ exclude_from_nav: true
     <div class="form-group">
       <label for="content">Content *</label>
       <textarea id="content" required rows="15" placeholder="Write your poem, story, or reflection here..."></textarea>
-      <small>For poems: Add two spaces at the end of each line for line breaks</small>
+      <label class="checkbox-option">
+        <input type="checkbox" id="auto-line-breaks" checked />
+        Auto-add line breaks (adds two spaces at the end of each line for poems)
+      </label>
     </div>
 
     <div class="form-actions">
@@ -249,6 +252,21 @@ exclude_from_nav: true
   font-weight: 600;
 }
 
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: normal;
+  margin-top: 0.5em;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.checkbox-option input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .form-actions {
     flex-direction: column;
@@ -328,6 +346,25 @@ function generateMarkdown(data) {
     ? `[${data.tags.join(', ')}]`
     : '[]';
 
+  // Process content for line breaks if checkbox is checked
+  let processedContent = data.content;
+  const autoLineBreaks = document.getElementById('auto-line-breaks').checked;
+
+  if (autoLineBreaks) {
+    // Add two spaces before each line break (but not at the very end)
+    processedContent = processedContent
+      .split('\n')
+      .map((line, index, array) => {
+        // Don't add spaces to the last line or to empty lines
+        if (index === array.length - 1 || line.trim() === '') {
+          return line;
+        }
+        // Add two spaces at the end of the line if they're not already there
+        return line.trimEnd() + '  ';
+      })
+      .join('\n');
+  }
+
   return `---
 title: "${data.title}"
 type: ${typesStr}
@@ -340,7 +377,7 @@ companions: []
 visibility: ${data.visibility}
 ---
 
-${data.content}
+${processedContent}
 
 ---
 
