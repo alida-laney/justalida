@@ -40,6 +40,19 @@ This file contains context and todos for working on Alida's personal website.
 - **Project styling**: Technical appearance
 - **Visual-art styling**: Gallery-focused layout
 
+#### 5. Visibility & Hidden Content System
+- **Purpose**: Create protective boundaries around vulnerable work while rewarding genuine engagement
+- **Tiers of visibility**:
+  - `public` - Appears in creations page, sitemaps, RSS feeds (default if not specified)
+  - `unlisted` - Accessible by direct URL but excluded from listings, sitemaps, and feeds
+  - `discoverable` - Same as unlisted, but intentionally linked via subtle styling in public content
+  - `protected` - (Future) Requires password/authentication
+- **Philosophy**: Hidden in plain sight, not announced. No treasure maps or gamification.
+- **Link styling**:
+  - `.subtle-link` - Slightly different color, font-weight, letter-spacing with dotted underline on hover
+  - `.whisper-link` - Barely larger font size (1.05em), subtle opacity change
+- **Security note**: Client-side hiding provides friction for bad actors, not true security
+
 ## Content Structure
 
 ### Front Matter Format
@@ -53,9 +66,15 @@ tags: [theme1, theme2, theme3]
 excerpt: "Brief description"
 content_id: "unique-id-001"
 companions: [related-content-id-001, related-content-id-002]  # Optional
-visibility: public  # For future riddle system
+visibility: public  # Options: public (default), unlisted, discoverable, protected (future)
 ---
 ```
+
+**Visibility Options Explained:**
+- **public** or omitted - Normal content, appears everywhere
+- **unlisted** - Accessible by URL but hidden from creations page, sitemaps, feeds
+- **discoverable** - Like unlisted, but you'll add subtle links to it in public content
+- **protected** - (Not yet implemented) Will require password/authentication
 
 ### File Locations
 - **Main content**: `_content/filename.md`
@@ -65,12 +84,15 @@ visibility: public  # For future riddle system
 ## Current Todos
 
 ### Active
-1. **Design riddle/puzzle system for unlocking deeper content** - Create a way to hide certain content behind riddles/puzzles that reward dedicated exploration
+1. **Add password protection layer** - Implement password/authentication for `protected` visibility tier
+2. **Create example hidden content** - Test the discoverable content system with real poems/reflections
 
 ### Completed Recently
+- ✅ Visibility system (public, unlisted, discoverable, protected tiers)
+- ✅ Subtle link styling for hidden-in-plain-sight discovery
+- ✅ Sitemap/feed exclusion for non-public content
 - ✅ Unified content backend with type-based filtering
-- ✅ Dynamic creations page with dropdown filters  
-- ✅ Simplified Theme + Content Type filtering (removed redundant media field)
+- ✅ Dynamic creations page with dropdown filters
 - ✅ Clean navigation structure (About, Creations, Misc)
 - ✅ Companion piece relationship system
 - ✅ Custom domain setup and automated deployment
@@ -145,11 +167,27 @@ git push origin initial_development
 ```
 
 ### Content Creation
+
+**Standard content:**
 1. Create file in `_content/filename.md`
 2. Add proper front matter with `type`, `tags`, `content_id`
-3. Write content with line breaks (`  ` at end of lines for poems)
-4. Build and test locally
-5. Content appears automatically in `/creations/` with filtering
+3. Set `visibility: public` or omit (defaults to public)
+4. Write content with line breaks (`  ` at end of lines for poems)
+5. Build and test locally
+6. Content appears automatically in `/creations/` with filtering
+
+**Hidden/discoverable content:**
+1. Create file in `_content/filename.md`
+2. Set `visibility: discoverable` or `visibility: unlisted`
+3. Content will be excluded from creations page, sitemaps, feeds
+4. For discoverable content, add subtle links in public poems/work:
+   ```markdown
+   Some public poem text with a <span class="subtle-link">[word]({% link _content/hidden-piece.md %})</span> that links
+
+   Or use whisper-link for even more subtlety:
+   Some text with a <span class="whisper-link">[barely]({% link _content/hidden-piece.md %})</span> noticeable link
+   ```
+5. Test by hovering over the subtle link - should have slight visual difference
 
 ## Notes for Future Sessions
 - Alida values authentic, vulnerable communication balanced with technical rigor

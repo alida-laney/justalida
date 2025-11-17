@@ -2,9 +2,44 @@
 ---
 body {
   background-color: #fff; /* White paper background */
-  background-image: 
+  background-image:
     linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), /* Vertical red line (adjust color as needed) */
     linear-gradient(#eee .1em, transparent .1em); /* Horizontal blue lines (adjust color as needed) */
   background-size: 100% 1.2em; /* Adjust 1.2em for line spacing */
   line-height: 1.2em; /* Ensure text aligns with lines */
+}
+
+/* Subtle link styling for discoverable/hidden content */
+/* These links are meant to be noticed only by attentive readers */
+.subtle-link {
+  color: #2a2a2a; /* Slightly lighter than normal text (#1a1a1a) */
+  font-weight: 500; /* Slightly bolder than normal (400) */
+  letter-spacing: 0.01em; /* Tiny increase in letter spacing */
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.subtle-link:hover {
+  color: #4a4a4a; /* Becomes more visible on hover */
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* Alternative: even more subtle, just for variety */
+.whisper-link {
+  color: inherit;
+  font-size: 1.05em; /* Barely larger (as you suggested, 10 to 11) */
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  opacity: 0.95;
+}
+
+.whisper-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(42, 42, 42, 0.4);
+  cursor: pointer;
 }

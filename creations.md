@@ -21,11 +21,11 @@ Find exactly what you're looking for—filter by theme, media type, or both to d
       <label for="theme-filter">Theme:</label>
       <select id="theme-filter" class="filter-dropdown">
         <option value="">All Themes</option>
-        {% assign all_tags = site.posts | concat: site.content | map: 'tags' | compact | flatten | uniq | sort %}
+        {% assign all_public = site.posts | concat: site.content | where_exp: "item", "item.visibility == 'public' or item.visibility == nil or item.visibility == ''" %}
+        {% assign all_tags = all_public | map: 'tags' | compact | flatten | uniq | sort %}
         {% for tag in all_tags %}
-          {% assign tag_posts = site.posts | where: 'tags', tag %}
-          {% assign tag_content = site.content | where: 'tags', tag %}
-          {% assign tag_count = tag_posts.size | plus: tag_content.size %}
+          {% assign tag_items = all_public | where: 'tags', tag %}
+          {% assign tag_count = tag_items.size %}
           <option value="{{ tag | slugify }}">{{ tag | capitalize }} ({{ tag_count }})</option>
         {% endfor %}
       </select>
@@ -35,13 +35,13 @@ Find exactly what you're looking for—filter by theme, media type, or both to d
       <label for="type-filter">Content Type:</label>
       <select id="type-filter" class="filter-dropdown">
         <option value="">All Types</option>
-        {% assign all_content = site.posts | concat: site.content %}
-        {% assign all_types = all_content | map: 'type' | compact | flatten | uniq | sort %}
+        {% assign all_types = all_public | map: 'type' | compact | flatten | uniq | sort %}
         {% for type in all_types %}
-          {% assign type_count = all_content | where_exp: "item", "item.type contains type" | size %}
+          {% assign type_count = all_public | where_exp: "item", "item.type contains type" | size %}
           <option value="{{ type | slugify }}">{{ type | capitalize }} ({{ type_count }})</option>
         {% endfor %}
-        <option value="blog-post">Blog Post ({{ site.posts.size }})</option>
+        {% assign public_posts = site.posts | where_exp: "item", "item.visibility == 'public' or item.visibility == nil or item.visibility == ''" %}
+        <option value="blog-post">Blog Post ({{ public_posts.size }})</option>
       </select>
     </div>
 
@@ -55,8 +55,9 @@ Find exactly what you're looking for—filter by theme, media type, or both to d
 ## Latest Creations
 
 {% assign all_creations = site.posts | concat: site.content | sort: 'date' | reverse %}
+{% assign public_creations = all_creations | where_exp: "item", "item.visibility == 'public' or item.visibility == nil or item.visibility == ''" %}
 <div class="creations-list">
-  {% for item in all_creations limit: 10 %}
+  {% for item in public_creations limit: 10 %}
   <article class="creation-item" 
            data-tags="{% for tag in item.tags %}{{ tag | slugify }} {% endfor %}"
            data-type="{% if item.type.size > 0 %}{% for type in item.type %}{{ type | slugify }} {% endfor %}{% else %}blog-post{% endif %}">
