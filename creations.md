@@ -58,11 +58,12 @@ Find exactly what you're looking for—filter by theme, media type, or both to d
 {% assign public_creations = all_creations | where_exp: "item", "item.visibility == 'public' or item.visibility == nil or item.visibility == ''" %}
 <div class="creations-list">
   {% for item in public_creations limit: 10 %}
-  <article class="creation-item" 
+  <article class="creation-item"
            data-tags="{% for tag in item.tags %}{{ tag | slugify }} {% endfor %}"
-           data-type="{% if item.type.size > 0 %}{% for type in item.type %}{{ type | slugify }} {% endfor %}{% else %}blog-post{% endif %}">
+           data-type="{% if item.type.size > 0 %}{% for type in item.type %}{{ type | slugify }} {% endfor %}{% else %}blog-post{% endif %}"
+           data-url="{{ item.url | relative_url }}">
     <header class="creation-header">
-      <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+      <h3><a href="{{ item.url | relative_url }}" class="creation-title-link">{{ item.title }}</a></h3>
       <div class="creation-meta">
         {{ item.date | date: "%B %Y" }}
         {% if item.type.size > 0 %}
@@ -186,6 +187,8 @@ Find exactly what you're looking for—filter by theme, media type, or both to d
   border-left: 3px solid #e8e8e8;
   border-radius: 5px;
   transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
 .creation-item.hidden {
@@ -195,6 +198,7 @@ Find exactly what you're looking for—filter by theme, media type, or both to d
 .creation-item:hover {
   border-left-color: #2a7ae4;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: #f8f8f8;
 }
 
 .creation-header h3 {
@@ -261,29 +265,44 @@ document.addEventListener('DOMContentLoaded', function() {
   const themeFilter = document.getElementById('theme-filter');
   const typeFilter = document.getElementById('type-filter');
   const clearButton = document.getElementById('clear-filters');
-  
+
   // Add event listeners to both dropdowns
   themeFilter.addEventListener('change', () => {
     currentFilters.theme = themeFilter.value;
     applyFilters();
   });
-  
+
   typeFilter.addEventListener('change', () => {
     currentFilters.type = typeFilter.value;
     applyFilters();
   });
-  
+
   clearButton.addEventListener('click', clearAllFilters);
-  
+
   // Add click handlers to mini-tags for quick filtering
   document.querySelectorAll('.mini-tag').forEach(tag => {
-    tag.addEventListener('click', function() {
+    tag.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent card click
       const filterTag = this.getAttribute('data-tag');
       themeFilter.value = filterTag;
       currentFilters.theme = filterTag;
       applyFilters();
-      
+
       // Filter applied - no need to scroll
+    });
+  });
+
+  // Make entire creation item clickable
+  document.querySelectorAll('.creation-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+      // Don't navigate if clicking on a link or tag
+      if (e.target.tagName === 'A' || e.target.classList.contains('mini-tag')) {
+        return;
+      }
+      const url = this.getAttribute('data-url');
+      if (url) {
+        window.location.href = url;
+      }
     });
   });
 });
