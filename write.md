@@ -59,18 +59,28 @@ exclude_from_nav: true
     </div>
 
     <div class="form-actions">
-      <button type="button" onclick="previewContent()" class="btn-secondary">Preview Markdown</button>
-      <button type="button" onclick="submitContent()" class="btn-primary">Publish to GitHub</button>
+      <button type="button" onclick="previewContent()" class="btn-primary">Generate Markdown</button>
     </div>
   </form>
 
   <div id="preview" class="preview" style="display: none;">
-    <h3>Generated Markdown</h3>
+    <h3>✓ Generated Markdown</h3>
     <pre id="preview-content"></pre>
-    <button onclick="copyToClipboard()" class="btn-secondary">Copy to Clipboard</button>
-  </div>
+    <button onclick="copyToClipboard()" class="btn-primary">Copy to Clipboard</button>
 
-  <div id="status" class="status"></div>
+    <div class="next-steps">
+      <h4>Next Steps:</h4>
+      <ol>
+        <li>Click "Copy to Clipboard" above</li>
+        <li>Go to <a href="https://github.com/alida-laney/justalida/new/main?filename=_content/" target="_blank">GitHub: Create new file</a></li>
+        <li>Name the file (it will suggest a name)</li>
+        <li>Paste the markdown</li>
+        <li>Commit directly to main branch</li>
+        <li>Wait 1-2 minutes for the site to rebuild!</li>
+      </ol>
+      <p><small>💡 Tip: You can also do this from the GitHub mobile app!</small></p>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -210,27 +220,33 @@ exclude_from_nav: true
   overflow-x: auto;
   font-size: 0.9em;
   line-height: 1.4;
+  margin-bottom: 1em;
 }
 
-.status {
-  margin-top: 1em;
+.next-steps {
+  background: #e8f4f8;
   padding: 1em;
   border-radius: 4px;
-  display: none;
+  margin-top: 1em;
 }
 
-.status.success {
-  background: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  display: block;
+.next-steps h4 {
+  margin-top: 0;
+  color: #2a7ae4;
 }
 
-.status.error {
-  background: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-  display: block;
+.next-steps ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.next-steps li {
+  margin-bottom: 0.5em;
+}
+
+.next-steps a {
+  color: #2a7ae4;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -345,70 +361,20 @@ function previewContent() {
 
 function copyToClipboard() {
   const markdown = document.getElementById('preview-content').textContent;
+  const button = event.target;
+
   navigator.clipboard.writeText(markdown).then(() => {
-    alert('Markdown copied to clipboard!');
+    const originalText = button.textContent;
+    button.textContent = '✓ Copied!';
+    button.style.background = '#28a745';
+
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.style.background = '';
+    }, 2000);
+  }).catch(err => {
+    alert('Failed to copy. Please copy manually from the text box above.');
   });
-}
-
-async function submitContent() {
-  const data = getFormData();
-  const markdown = generateMarkdown(data);
-  const status = document.getElementById('status');
-
-  // Validation
-  if (!data.title) {
-    status.className = 'status error';
-    status.textContent = 'Please enter a title';
-    return;
-  }
-
-  if (data.types.length === 0) {
-    status.className = 'status error';
-    status.textContent = 'Please select at least one content type';
-    return;
-  }
-
-  if (!data.content) {
-    status.className = 'status error';
-    status.textContent = 'Please enter some content';
-    return;
-  }
-
-  status.className = 'status';
-  status.textContent = 'Publishing...';
-  status.style.display = 'block';
-
-  try {
-    // TODO: Call serverless function here
-    // For now, just show the markdown
-    const response = await fetch('/api/publish', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        filename: `${data.filename}.md`,
-        content: markdown,
-        password: document.getElementById('gate-password').value
-      })
-    });
-
-    if (response.ok) {
-      status.className = 'status success';
-      status.textContent = `✓ Published! Your content will appear at /${data.filename}/ in 1-2 minutes after the site rebuilds.`;
-
-      // Clear form
-      document.getElementById('content-form').reset();
-      document.getElementById('preview').style.display = 'none';
-    } else {
-      throw new Error('Publish failed');
-    }
-  } catch (error) {
-    // For now, show preview since we don't have the serverless function yet
-    status.className = 'status error';
-    status.textContent = 'Serverless function not yet configured. Use Preview and copy the markdown for now.';
-    previewContent();
-  }
 }
 
 // Allow Enter in password field
