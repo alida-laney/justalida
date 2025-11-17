@@ -19,24 +19,27 @@ body {
   transition: all 0.2s ease;
 }
 
-.subtle-link a {
+.subtle-link a,
+.subtle-link a:link,
+.subtle-link a:visited,
+.subtle-link a:active {
   color: #2a2a2a !important;
   text-decoration: none !important;
 }
 
 .subtle-link:hover {
   color: #4a4a4a; /* Becomes more visible on hover */
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-offset: 2px;
-  cursor: pointer;
 }
 
-.subtle-link:hover a {
+.subtle-link:hover a,
+.subtle-link:hover a:link,
+.subtle-link:hover a:visited,
+.subtle-link:hover a:active {
   color: #4a4a4a !important;
   text-decoration: underline !important;
   text-decoration-style: dotted !important;
-  text-underline-offset: 2px;
+  text-underline-offset: 2px !important;
+  cursor: pointer;
 }
 
 /* Alternative: even more subtle, just for variety */
@@ -48,22 +51,25 @@ body {
   opacity: 0.95;
 }
 
-.whisper-link a {
+.whisper-link a,
+.whisper-link a:link,
+.whisper-link a:visited,
+.whisper-link a:active {
   color: inherit !important;
   text-decoration: none !important;
 }
 
 .whisper-link:hover {
   opacity: 1;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: rgba(42, 42, 42, 0.4);
-  cursor: pointer;
 }
 
-.whisper-link:hover a {
+.whisper-link:hover a,
+.whisper-link:hover a:link,
+.whisper-link:hover a:visited,
+.whisper-link:hover a:active {
   color: inherit !important;
   text-decoration: underline !important;
   text-decoration-style: dotted !important;
-  text-decoration-color: rgba(42, 42, 42, 0.4);
+  text-decoration-color: rgba(42, 42, 42, 0.4) !important;
+  cursor: pointer;
 }
