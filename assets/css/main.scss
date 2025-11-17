@@ -43,7 +43,11 @@ body {
 }
 
 /* Alternative: even more subtle, just for variety */
-.whisper-link {
+/* Nuclear option: override everything with maximum specificity */
+.whisper-link,
+.post-content .whisper-link,
+.page-content .whisper-link,
+article .whisper-link {
   color: inherit;
   font-size: 1.05em; /* Barely larger (as you suggested, 10 to 11) */
   text-decoration: none;
@@ -54,19 +58,51 @@ body {
 .whisper-link a,
 .whisper-link a:link,
 .whisper-link a:visited,
-.whisper-link a:active {
+.whisper-link a:active,
+.whisper-link a:hover,
+.post-content .whisper-link a,
+.post-content .whisper-link a:link,
+.post-content .whisper-link a:visited,
+.post-content .whisper-link a:active,
+.post-content .whisper-link a:hover,
+.page-content .whisper-link a,
+.page-content .whisper-link a:link,
+.page-content .whisper-link a:visited,
+.page-content .whisper-link a:active,
+.page-content .whisper-link a:hover,
+article .whisper-link a,
+article .whisper-link a:link,
+article .whisper-link a:visited,
+article .whisper-link a:active,
+article .whisper-link a:hover {
   color: inherit !important;
   text-decoration: none !important;
+  background-color: transparent !important;
 }
 
-.whisper-link:hover {
+.whisper-link:hover,
+.post-content .whisper-link:hover,
+.page-content .whisper-link:hover,
+article .whisper-link:hover {
   opacity: 1;
 }
 
 .whisper-link:hover a,
 .whisper-link:hover a:link,
 .whisper-link:hover a:visited,
-.whisper-link:hover a:active {
+.whisper-link:hover a:active,
+.post-content .whisper-link:hover a,
+.post-content .whisper-link:hover a:link,
+.post-content .whisper-link:hover a:visited,
+.post-content .whisper-link:hover a:active,
+.page-content .whisper-link:hover a,
+.page-content .whisper-link:hover a:link,
+.page-content .whisper-link:hover a:visited,
+.page-content .whisper-link:hover a:active,
+article .whisper-link:hover a,
+article .whisper-link:hover a:link,
+article .whisper-link:hover a:visited,
+article .whisper-link:hover a:active {
   color: inherit !important;
   text-decoration: underline !important;
   text-decoration-style: dotted !important;
