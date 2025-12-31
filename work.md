@@ -7,6 +7,13 @@ title: Work
 
 <p class="subtitle">~ Poems & Art ~</p>
 
+<p>
+  <span class="accent-dot purple"></span>
+  <span class="accent-dot pink"></span>
+  <span class="accent-dot blue"></span>
+  <span class="accent-dot yellow"></span>
+</p>
+
 <div class="work-grid">
   {% assign sorted_poems = site.poems | sort: 'date' %}
   {% for poem in sorted_poems %}

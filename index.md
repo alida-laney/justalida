@@ -5,6 +5,12 @@ title: Welcome
 
 <h1>Alida</h1>
 
+<p>
+  <span class="accent-dot pink"></span>
+  <span class="accent-dot blue"></span>
+  <span class="accent-dot yellow"></span>
+</p>
+
 <p class="subtitle">~ Hello and Welcome ~</p>
 
 <div class="content-section centered">
@@ -13,11 +19,23 @@ title: Welcome
   <p>This is a place where I share bits of myself through my creative work.</p>
 </div>
 
+<p class="accent-dots-divider">
+  <span class="accent-dot purple"></span>
+  <span class="accent-dot pink"></span>
+  <span class="accent-dot blue"></span>
+</p>
+
 <div class="content-section centered">
   <p>My work charts my healing journey in crystallized moments of feeling.</p>
 
   <p>I share this journey openly so folks like you might find me.</p>
 </div>
+
+<p class="accent-dots-divider">
+  <span class="accent-dot yellow"></span>
+  <span class="accent-dot purple"></span>
+  <span class="accent-dot pink"></span>
+</p>
 
 <div class="content-section centered">
   <p><em>Healing happens best in relationship.</em></p>
