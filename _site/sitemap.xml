@@ -21,6 +21,13 @@
 <lastmod>2025-08-14T00:00:00-04:00</lastmod>
 </url>
 <url>
+<loc>http://0.0.0.0:4000/2025/09/22/resume/</loc>
+<lastmod>2025-09-22T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/contact/</loc>
+</url>
+<url>
 <loc>http://0.0.0.0:4000/creations/</loc>
 </url>
 <url>
@@ -28,5 +35,8 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/misc/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/work/</loc>
 </url>
 </urlset>
