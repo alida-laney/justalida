@@ -28,7 +28,7 @@ title: Welcome
 <div class="content-section centered">
   <p>My work charts my healing journey in crystallized moments of feeling.</p>
 
-  <p>I share this journey openly so folks like you might find me.</p>
+  <p>I share this journey openly so folks who need it can find it.</p>
 </div>
 
 <p class="accent-dots-divider">
@@ -44,8 +44,7 @@ title: Welcome
 </div>
 
 <p>
-  <span class="accent-dot purple"></span>
-  <span class="accent-dot pink"></span>
   <span class="accent-dot blue"></span>
   <span class="accent-dot yellow"></span>
+  <span class="accent-dot purple"></span>
 </p>

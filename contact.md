@@ -8,9 +8,10 @@ title: Contact
 <p class="subtitle">~ I'd love to hear from you ~</p>
 
 <p>
+  <span class="accent-dot pink"></span>
   <span class="accent-dot blue"></span>
   <span class="accent-dot yellow"></span>
-  <span class="accent-dot pink"></span>
+  <span class="accent-dot purple"></span>
 </p>
 
 <div class="content-section contact-section">
