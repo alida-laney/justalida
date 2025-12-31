@@ -3,26 +3,26 @@ layout: landing
 title: Welcome
 ---
 
-<h1>Alida Laney</h1>
+<h1>Alida</h1>
 
-<p class="subtitle">Lorem ipsum dolor sit amet</p>
+<p class="subtitle">~ Hello and Welcome ~</p>
 
-<div class="content-section">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div class="content-section centered">
+  <p>I'm glad you've found my little corner of the internet.</p>
 
-  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>This is a place where I share bits of myself through my creative work.</p>
 </div>
 
 <div class="content-section centered">
-  <p><em>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</em></p>
+  <p>My work charts my healing journey in crystallized moments of feeling.</p>
 
-  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>I share this journey openly so folks like you might find me.</p>
 </div>
 
-<div class="content-section">
-  <p class="indented">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div class="content-section centered">
+  <p><em>Healing happens best in relationship.</em></p>
 
-  <p class="indented"><em>Ut enim ad minim veniam, quis nostrud exercitation.</em></p>
+  <p><em>Please explore & reach out if you feel called.</em></p>
 </div>
 
 <p>
