@@ -26,18 +26,25 @@ You can use blank lines for stanzas.
 
 ## Adding Art
 
-### Quick Method (Manual)
 1. Upload your image to `assets/art/`
-2. Edit `work.md` and add an art item:
+2. Create a new file in the `_art/` folder (like `_art/my-artwork.md`)
+3. Add front matter and content:
 
-```html
-<div class="work-item art-item">
-  <a href="/assets/art/your-image.jpg">
-    <img src="/assets/art/your-image.jpg" alt="Art Title">
-  </a>
-  <h3>Art Title</h3>
-</div>
+```yaml
+---
+title: "Your Art Title"
+layout: landing
+date: 2025-01-15
+image: /assets/art/your-image.jpg
+excerpt: "Optional description of the piece"
+---
+
+Optional: You can add more text about the piece here if you want.
 ```
+
+4. Save the file and commit/push - it will automatically appear on your Work page!
+
+Note: See `_art/example.md` for a working example (you can delete this file)
 
 ## Setting Up the Contact Form
 
