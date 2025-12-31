@@ -26,7 +26,7 @@ title: Work
   </div>
   {% endfor %}
 
-  {% assign sorted_art = site.art | sort: 'date' %}
+  <!-- {% assign sorted_art = site.art | sort: 'date' %}
   {% for artwork in sorted_art %}
   <div class="work-item art-item">
     {% if artwork.image %}
@@ -40,5 +40,5 @@ title: Work
     <p class="excerpt">{{ artwork.excerpt }}</p>
     {% endif %}
   </div>
-  {% endfor %}
+  {% endfor %} -->
 </div>
