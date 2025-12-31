@@ -21,6 +21,27 @@ body {
   line-height: 1.7;
 }
 
+/* Navigation */
+.main-nav {
+  text-align: center;
+  padding: 2rem 0 0 0;
+  margin-bottom: 0;
+}
+
+.main-nav a {
+  color: var(--charcoal);
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--soft-blue);
+}
+
 .landing-page {
   max-width: 700px;
   margin: 0 auto;
@@ -94,6 +115,113 @@ body {
 
 .landing-page .indented {
   padding-left: 2rem;
+}
+
+/* Work page */
+.work-grid {
+  margin: 3rem 0;
+}
+
+.work-item {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.work-item h3 {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.work-item h3 a {
+  color: var(--charcoal);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.work-item h3 a:hover {
+  color: var(--soft-blue);
+  border-bottom-color: var(--soft-blue);
+}
+
+.work-item.art img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+.work-item .excerpt {
+  font-style: italic;
+  color: #7a7a7a;
+  font-size: 0.95rem;
+}
+
+/* Contact form */
+.contact-form {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 3px;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--soft-blue);
+  background-color: white;
+}
+
+.contact-form button {
+  background-color: var(--soft-blue);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 3px;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #6fb0c1;
+}
+
+.form-note {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 /* Mobile responsive */

@@ -22,7 +22,7 @@ title: Welcome
 <div class="content-section centered">
   <p><em>Healing happens best in relationship.</em></p>
 
-  <p><em>Please explore & reach out if you feel called.</em></p>
+  <p><em>Please explore & <a href="/contact/">reach out</a> if you feel called.</em></p>
 </div>
 
 <p>
