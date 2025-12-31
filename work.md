@@ -11,6 +11,7 @@ title: Work
   {% for poem in site.poems %}
   <div class="work-item poem-item">
     <h3><a href="{{ poem.url | relative_url }}">{{ poem.title }}</a></h3>
+    <p class="poem-date-small">{{ poem.date | date: "%B %-d, %Y" }}</p>
     {% if poem.excerpt %}
     <p class="excerpt">{{ poem.excerpt }}</p>
     {% endif %}
