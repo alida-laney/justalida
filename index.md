@@ -1,30 +1,33 @@
 ---
+layout: landing
 title: Welcome
-layout: page
-nav_order: 1
 ---
 
-My name is Alida. If you've somehow found this site, you're welcome to poke around, although it is heavily under construction.  
+<h1>Alida Laney</h1>
 
-All the below text was Claude-Code-Generated & will likely not remain as-is for very long, but I am appreciative of my coding companion, so it's staying for now :)
+<p class="subtitle">Lorem ipsum dolor sit amet</p>
 
-## Professionally
-I'm a biologist-turned-programmer, drawn to the elegance of systems—whether cellular mechanisms or clean code. My foundation in evidence-based thinking keeps me grounded while navigating complexity. I build things that matter, solve problems that need solving, and approach technical challenges with both rigor and creativity.
+<div class="content-section">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-## Personally  
-I believe in the power of authentic connection and the courage it takes to be vulnerable. My path has been unconventional, marked by deep learning through experience rather than textbooks. I've learned that joy and groundedness are possible even after—especially after—walking through difficult terrain.
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
-## What You'll Find Here
-This site is designed for exploration at whatever depth feels right for you:
+<div class="content-section centered">
+  <p><em>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</em></p>
 
-- **Surface level**: My technical projects, creative work, and upcoming events
-- **Deeper waters**: Personal stories, reflections, and resources for those on similar journeys
-- **Hidden treasures**: For the curious souls willing to solve puzzles and follow threads
+  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
 
-I'm working on an app, writing poetry, performing when the spirit moves me, and always seeking authentic connection with fellow travelers.
+<div class="content-section">
+  <p class="indented">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
----
+  <p class="indented"><em>Ut enim ad minim veniam, quis nostrud exercitation.</em></p>
+</div>
 
-*"The cave you fear to enter holds the treasure you seek."* — Joseph Campbell
-
-[Curious about the journey? • Explore my creations](/creations/)
+<p>
+  <span class="accent-dot purple"></span>
+  <span class="accent-dot pink"></span>
+  <span class="accent-dot blue"></span>
+  <span class="accent-dot yellow"></span>
+</p>

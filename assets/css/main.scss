@@ -1,10 +1,112 @@
 ---
 ---
+
+@import "minima";
+
+:root {
+  --soft-purple: #c9aed6;
+  --soft-pink: #f4b8c4;
+  --soft-blue: #89c5d4;
+  --soft-yellow: #f9e4a0;
+  --soft-orange: #f5c78e;
+  --cream: #f8f5f0;
+  --charcoal: #4a4a4a;
+  --light-gray: #e8e3db;
+}
+
 body {
-  background-color: #fff; /* White paper background */
-  background-image: 
-    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), /* Vertical red line (adjust color as needed) */
-    linear-gradient(#eee .1em, transparent .1em); /* Horizontal blue lines (adjust color as needed) */
-  background-size: 100% 1.2em; /* Adjust 1.2em for line spacing */
-  line-height: 1.2em; /* Ensure text aligns with lines */
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.7;
+}
+
+.landing-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.landing-page h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--charcoal);
+}
+
+.landing-page .subtitle {
+  font-size: 1.2rem;
+  color: #7a7a7a;
+  font-style: italic;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.landing-page .content-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.landing-page .content-section p {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.landing-page .content-section.centered p {
+  text-align: center;
+}
+
+.landing-page a {
+  color: var(--soft-blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.landing-page a:hover {
+  border-bottom-color: var(--soft-blue);
+}
+
+/* Accent elements inspired by geometric shapes in artwork */
+.accent-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+}
+
+.accent-dot.purple { background: var(--soft-purple); }
+.accent-dot.pink { background: var(--soft-pink); }
+.accent-dot.blue { background: var(--soft-blue); }
+.accent-dot.yellow { background: var(--soft-yellow); }
+
+/* Formatting support for writing */
+.landing-page em {
+  font-style: italic;
+  color: #666;
+}
+
+.landing-page .indented {
+  padding-left: 2rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .landing-page {
+    padding: 2rem 1rem;
+  }
+
+  .landing-page h1 {
+    font-size: 2rem;
+  }
+
+  .landing-page .subtitle {
+    font-size: 1rem;
+  }
 }
