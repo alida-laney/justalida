@@ -17,13 +17,17 @@ title: Work
   </div>
   {% endfor %}
 
-  <!-- To add art, create files in the 'art' folder and they'll appear here -->
-  <!-- Example:
+  {% for artwork in site.art %}
   <div class="work-item art-item">
-    <a href="/path/to/full-size-image.jpg">
-      <img src="/path/to/image.jpg" alt="Art Title">
+    {% if artwork.image %}
+    <a href="{{ artwork.image | relative_url }}">
+      <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
     </a>
-    <h3>Art Title</h3>
+    {% endif %}
+    <h3>{{ artwork.title }}</h3>
+    {% if artwork.excerpt %}
+    <p class="excerpt">{{ artwork.excerpt }}</p>
+    {% endif %}
   </div>
-  -->
+  {% endfor %}
 </div>

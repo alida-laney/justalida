@@ -7,7 +7,7 @@ title: Contact
 
 <p class="subtitle">~ I'd love to hear from you ~</p>
 
-<div class="content-section">
+<div class="content-section contact-section">
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
     <div class="form-group">
       <label for="name">Name</label>
@@ -27,5 +27,3 @@ title: Contact
     <button type="submit">Send Message</button>
   </form>
 </div>
-
-<p class="form-note"><em>Note: You'll need to set up a Formspree account and replace YOUR_FORM_ID in the form action above.</em></p>

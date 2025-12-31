@@ -24,6 +24,9 @@ collections:
   poems:
     output: true
     permalink: /poems/:title/
+  art:
+    output: true
+    permalink: /art/:title/
 
 # Tag settings
 tag_page_layout: tag_page
