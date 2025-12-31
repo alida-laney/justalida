@@ -8,7 +8,8 @@ title: Work
 <p class="subtitle">~ Poems & Art ~</p>
 
 <div class="work-grid">
-  {% for poem in site.poems %}
+  {% assign sorted_poems = site.poems | sort: 'date' %}
+  {% for poem in sorted_poems %}
   <div class="work-item poem-item">
     <h3><a href="{{ poem.url | relative_url }}">{{ poem.title }}</a></h3>
     <p class="poem-date-small">{{ poem.date | date: "%B %-d, %Y" }}</p>
@@ -18,7 +19,8 @@ title: Work
   </div>
   {% endfor %}
 
-  {% for artwork in site.art %}
+  {% assign sorted_art = site.art | sort: 'date' %}
+  {% for artwork in sorted_art %}
   <div class="work-item art-item">
     {% if artwork.image %}
     <a href="{{ artwork.image | relative_url }}">
@@ -26,6 +28,7 @@ title: Work
     </a>
     {% endif %}
     <h3>{{ artwork.title }}</h3>
+    <p class="poem-date-small">{{ artwork.date | date: "%B %-d, %Y" }}</p>
     {% if artwork.excerpt %}
     <p class="excerpt">{{ artwork.excerpt }}</p>
     {% endif %}
