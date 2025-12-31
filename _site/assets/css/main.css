@@ -788,7 +788,14 @@ body {
 .work-item h3 {
   font-weight: 300;
   letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.poem-date-small {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 0.75rem;
 }
 
 .work-item h3 a {
