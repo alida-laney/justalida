@@ -16,11 +16,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Unified content collection
+# Collections
 collections:
   content:
     output: true
     permalink: /:title/
+  poems:
+    output: true
+    permalink: /poems/:title/
 
 # Tag settings
 tag_page_layout: tag_page

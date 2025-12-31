@@ -8,21 +8,22 @@ title: Work
 <p class="subtitle">~ Poems & Art ~</p>
 
 <div class="work-grid">
-  <!-- Your poems and art will go here -->
-  <!-- You can add them like this: -->
-
-  <!-- Example poem entry:
-  <div class="work-item poem">
-    <h3><a href="/poems/poem-title/">Poem Title</a></h3>
-    <p class="excerpt">First line of the poem...</p>
+  {% for poem in site.poems %}
+  <div class="work-item poem-item">
+    <h3><a href="{{ poem.url | relative_url }}">{{ poem.title }}</a></h3>
+    {% if poem.excerpt %}
+    <p class="excerpt">{{ poem.excerpt }}</p>
+    {% endif %}
   </div>
-  -->
+  {% endfor %}
 
-  <!-- Example art entry:
-  <div class="work-item art">
-    <img src="/path/to/image.jpg" alt="Art Title">
+  <!-- To add art, create files in the 'art' folder and they'll appear here -->
+  <!-- Example:
+  <div class="work-item art-item">
+    <a href="/path/to/full-size-image.jpg">
+      <img src="/path/to/image.jpg" alt="Art Title">
+    </a>
     <h3>Art Title</h3>
   </div>
   -->
-
 </div>
