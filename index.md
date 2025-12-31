@@ -1,30 +1,50 @@
 ---
+layout: landing
 title: Welcome
-layout: page
-nav_order: 1
 ---
 
-My name is Alida. If you've somehow found this site, you're welcome to poke around, although it is heavily under construction.  
+<h1>Alida</h1>
 
-All the below text was Claude-Code-Generated & will likely not remain as-is for very long, but I am appreciative of my coding companion, so it's staying for now :)
+<p>
+  <span class="accent-dot pink"></span>
+  <span class="accent-dot blue"></span>
+  <span class="accent-dot yellow"></span>
+</p>
 
-## Professionally
-I'm a biologist-turned-programmer, drawn to the elegance of systems—whether cellular mechanisms or clean code. My foundation in evidence-based thinking keeps me grounded while navigating complexity. I build things that matter, solve problems that need solving, and approach technical challenges with both rigor and creativity.
+<p class="subtitle">~ Hello and Welcome ~</p>
 
-## Personally  
-I believe in the power of authentic connection and the courage it takes to be vulnerable. My path has been unconventional, marked by deep learning through experience rather than textbooks. I've learned that joy and groundedness are possible even after—especially after—walking through difficult terrain.
+<div class="content-section centered">
+  <p>I'm glad you've found my little corner of the internet.</p>
 
-## What You'll Find Here
-This site is designed for exploration at whatever depth feels right for you:
+  <p>This is a place where I share bits of myself through my creative work.</p>
+</div>
 
-- **Surface level**: My technical projects, creative work, and upcoming events
-- **Deeper waters**: Personal stories, reflections, and resources for those on similar journeys
-- **Hidden treasures**: For the curious souls willing to solve puzzles and follow threads
+<p class="accent-dots-divider">
+  <span class="accent-dot purple"></span>
+  <span class="accent-dot pink"></span>
+  <span class="accent-dot blue"></span>
+</p>
 
-I'm working on an app, writing poetry, performing when the spirit moves me, and always seeking authentic connection with fellow travelers.
+<div class="content-section centered">
+  <p>My work charts my healing journey in crystallized moments of feeling.</p>
 
----
+  <p>I share this journey openly so folks who need it can find it.</p>
+</div>
 
-*"The cave you fear to enter holds the treasure you seek."* — Joseph Campbell
+<p class="accent-dots-divider">
+  <span class="accent-dot yellow"></span>
+  <span class="accent-dot purple"></span>
+  <span class="accent-dot pink"></span>
+</p>
 
-[Curious about the journey? • Explore my creations](/creations/)
+<div class="content-section centered">
+  <p><em>Healing happens best in relationship.</em></p>
+
+  <p><em>Please explore & <a href="/contact/">reach out</a> if you feel called.</em></p>
+</div>
+
+<p>
+  <span class="accent-dot blue"></span>
+  <span class="accent-dot yellow"></span>
+  <span class="accent-dot purple"></span>
+</p>

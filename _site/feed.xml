@@ -1,3 +1,282 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-09-07T17:29:28-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">justalida</title><subtitle>Welcome to justalida.com</subtitle><entry><title type="html">Test CSS</title><link href="http://0.0.0.0:4000/2025/08/14/testcss/" rel="alternate" type="text/html" title="Test CSS" /><published>2025-08-14T00:00:00-04:00</published><updated>2025-08-14T00:00:00-04:00</updated><id>http://0.0.0.0:4000/2025/08/14/testcss</id><content type="html" xml:base="http://0.0.0.0:4000/2025/08/14/testcss/"><![CDATA[<p>@import “main”;</p>]]></content><author><name></name></author><summary type="html"><![CDATA[@import “main”;]]></summary></entry><entry><title type="html">First Post</title><link href="http://0.0.0.0:4000/2025/08/14/title/" rel="alternate" type="text/html" title="First Post" /><published>2025-08-14T00:00:00-04:00</published><updated>2025-08-14T00:00:00-04:00</updated><id>http://0.0.0.0:4000/2025/08/14/title</id><content type="html" xml:base="http://0.0.0.0:4000/2025/08/14/title/"><![CDATA[<p>Hey folks, I’m working through the Github Pages tutorial right now.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-31T16:34:36-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">justalida</title><subtitle>Welcome to justalida.com</subtitle><entry><title type="html">Resume</title><link href="http://0.0.0.0:4000/2025/09/22/resume/" rel="alternate" type="text/html" title="Resume" /><published>2025-09-22T00:00:00-04:00</published><updated>2025-09-22T00:00:00-04:00</updated><id>http://0.0.0.0:4000/2025/09/22/resume</id><content type="html" xml:base="http://0.0.0.0:4000/2025/09/22/resume/"><![CDATA[<h1 id="my-professional-history-narratively">My Professional History, Narratively</h1>
+
+<h2 id="background">Background</h2>
+
+<p>Growing up, I cared deeply about my education. My parents moved from central Michigan to Maryland when I was still an infant. They grew up in a company town, where life situated itself around serving that corporation. Whether you worked for The Company (my father’s family) or worked somewhere that served The Company (my mother’s family), everything was connected to the singular heartbeat.</p>
+
+<p>Even in the rural part of Maryland I lived in, the presence of two large cities - Washington D.C. and Baltimore - created a palpable sense of opportunity. I grew up with a sense of gratitude for this proximity.</p>
+
+<h2 id="first-opportunity">First Opportunity</h2>
+
+<p>In my junior year of high school, opportunity arose. My county was home to a military base, which was home to many research labs associated with the National Cancer Institute. They hired interns to work full time for the summer and part time for their final year of school. I was delighted to be accepted to the program and worked an additional summer between high school and college.</p>
+
+<blockquote>
+  <p><strong>Wet Lab Research Intern</strong><br />
+<em>NIH/NCI Genomics Laboratory</em><br />
+June 2015 - August 2016<br />
+RNA/DNA High-Throughput Microarray Assays</p>
+</blockquote>
+
+<h2 id="college--research-internships">College &amp; Research Internships</h2>
+
+<p>I attended the University of Maryland, Baltimore County (UMBC) for my undergraduate degree.</p>
+
+<p>When I selected my major, my intent was to pursue a doctorate degree in Cellular Biology. My grandparents were academics and chemists, and I wanted to follow in their footsteps. I selected Bioinformatics &amp; Computational Biology as my degree, thinking, “The extra computer science classes will make me stand out on grad school applications.”</p>
+
+<p>My second semester of undergrad, I took Computer Science 201, which was the introductory course at the time. We learned how to navigate command lines and how to solve problems using Python3.</p>
+
+<p>This basic knowledge helped me land a computational chemistry position at a different military base. The lab’s previous interns had spent the summer learning the things I learned in my intro class, so they were a bit unsure of what to do with me. I spent the summer in the basement, essentially by myself, writing my first data pipeline.</p>
+
+<p>My work from that summer is detailed in the paper linked below, which I was delighted to still find on the internet!</p>
+
+<blockquote>
+  <p><strong>Research Intern - Computational Chemistry</strong><br />
+<em>U.S. Army Edgewood Chemical Biological Center</em><br />
+May 2017 - August 2017<br />
+Analysis of Volatile Organic Compounds<br />
+Paper: https://apps.dtic.mil/sti/tr/pdf/AD1051358.pdf</p>
+</blockquote>
+
+<p>Continuing on my research trajectory, I applied to every computational biology undergrad research assistantship program I was able to find (I think there were 8 or 9 at the time). I was accepted by the Univeristy of Wisconsin-Madison!</p>
+
+<p>This summer was precious to me.</p>
+
+<p>The structured program was a blessing. My cohort of ~6 students met weekly to discuss our progress and projects. We grew quite close by the end of the summer.</p>
+
+<p>When I talk about this work, what I remember most is the collaboration between wet and dry science. My computational lab worked with a more traditional biology lab who studied HIV binding proteins. They produced a list of 287 proteins and asked us to return a subset that could direct their continued research. We returned 8 proteins of interest to them.</p>
+
+<blockquote>
+  <p><strong>Biomedical Data Science Intern</strong><br />
+<em>University of Wisconsin-Madison</em><br />
+May 2018 - August 2018<br />
+Characterizing the Functionality of Human HIV-Binding Proteins<br />
+Paper: https://docs.google.com/document/d/1Nc5TV1LLoKWcjeGDGp9MwlyoABIflPDpK2kI8bwT_lk/edit?usp=sharing</p>
+</blockquote>
+
+<p>The experience of that summer was quite rich.</p>
+
+<p>It was my first time truly in the environment of academia, and… it felt wrong to me. This was an identity-changing experience, to say the least.</p>
+
+<p>I spent much of the summer speaking with mentors, networking, and learning about what else was out there, now that I felt sufficiently able to wield the tool of programming. I was particularly curious about software engineering opportunities.</p>
+
+<p>If you’re familiar with Madison, you’ll know that talking biomedicine and software in that environment could only land you in one place - Epic.</p>
+
+<p>I applied to only one internship for the following summer and was accepted.</p>
+
+<h2 id="software">Software?</h2>
+
+<blockquote>
+  <p><strong>Software Development Intern</strong><br />
+<em>Epic Systems</em><br />
+May 2019 - August 2019<br />
+Web Development for Electronic Health Records</p>
+</blockquote>
+
+<p>Epic is a beast in the medical field. It is also a strange place to work. They are known for their extravagant campus, in-house tech, and high salaries, so there is a parcular energy associated with this company.</p>
+
+<p>I enjoyed my summer and made many friends. I dipped my toes into the software industry, which was completely new for me.</p>
+
+<p>This gave the whole experience a purgatorial tone. I set aside my academic aspirations, I was trying something new, and I still didn’t feel a concrete sense of belonging or direction.</p>
+
+<h2 id="teaching">Teaching</h2>
+
+<p>My sights for post-graduation were set on something big. Before I can talk about that, though, I need to mention a piece of my professional life I have neglected: teaching.</p>
+
+<p>The intro computer science course changed the trajectory of my life and career in such a profound way, I was called to give back. I became a teaching assistant for two semesters. This was one of my favorite jobs I had ever worked.</p>
+
+<p>I was responsible for holding office hours, teaching a group of ~20 students once each week, grading, and creating my own instruction materials. My favorite part was the weekly class; seeing the students grasp a concept because of my explanation was rewarding and challenging in the best way.</p>
+
+<blockquote>
+  <p><strong>Computer Science 201 Teaching Assistant</strong><br />
+<em>University of Maryland, Baltimore County</em><br />
+Fall 2018 and Fall 2019 Semesters<br />
+Teaching Intro Python Syntax and Programming Concepts</p>
+</blockquote>
+
+<p>Because of this experience, I felt confident enough to apply for a Fulbright English Teaching Assistantship grant.</p>
+
+<p>My free time during my Epic summer was spent writing essays. Fortunately, my university employeed someone whose full time job was to assist students with these prestigious grant applications. He took a liking to me because I was applying to teach in Latvia, and he had spent time in Estonia.</p>
+
+<p>If I recall correctly, the final drafts I submitted were the product of 14 rounds of edits. It was the first time in my life I had ever received critique in this way. I remember receiving the first round of edits and pausing before opening the file to remind myself, “Anything negative he said is with the intention to help you succeed.”</p>
+
+<p>Fulbright is a labor of love and patience. Applications are submitted in October. Semi-finalist notifications happen around January, then finalist notifications happen around May for start dates in September.</p>
+
+<p>Because it is a competitive grant program, I could not put all my eggs in that basket. I applied to several internships for my final semester of college and found one at a local company.</p>
+
+<h2 id="graduating-in-2020">Graduating In 2020</h2>
+
+<p>The intent of the internship was to work on computational research projects, which I did early on, but, shortly after joining the team, COVID hit. Things shifted significantly.</p>
+
+<p>The bulk of my work here ended up relying more on my teaching and writing skills than my programming skills. It was valuable in a way I often forget to reflect on because of the weight of the context of the time. I truly enjoyed working with my team here, especially my mentor, Nick Saba.</p>
+
+<blockquote>
+  <p><strong>Intern</strong><br />
+<em>ARSIEM Corporation</em><br />
+January 2020 - August 2020  <br />
+Content Creation and Curriculum Review for Courses on IoT, OPSEC, etc.</p>
+</blockquote>
+
+<p>2020 was uncertain for everybody, of course.</p>
+
+<p>When May came around, I found out I had been given the Fulbright! The grant length had been cut in half - only the Spring semester - so I was left with an awkward amount of time.</p>
+
+<p>Do I try to find a full time job (in the spring 2020 market), knowing I would be leaving in January? Or do I stick it out at a part time internship?</p>
+
+<p>Due to external circumstances, I decided to go all-in on finding a job. This ended up being the correct call.</p>
+
+<p>My job search was treacherous. In order to not get discouraged, I set myself a limit and a goal of 5 job applications per work day. Around 145 applications and six weeks of diligence without a single interview, I sent out five more applications and declared in my heart, “This was the last batch.”</p>
+
+<p>I got two interviews and two offers from those final five.</p>
+
+<p>In August of 2020, I became a software engineer.</p>
+
+<h2 id="software-engineering">Software Engineering</h2>
+
+<blockquote>
+  <p><strong>Jr. Software Engineer</strong><br />
+<em>Champions Oncology Inc.</em><br />
+August 2020 - September 2021<br />
+PHP Web Development, Data Visualization, and Lab Inventory Management System Creation</p>
+</blockquote>
+
+<p>This job perfectly suited my skillset at the time and aligned with my interests in combining wet and dry lab work.</p>
+
+<p>I loved it.</p>
+
+<p>The company was cancer-focused. From what I remember, they kept various cell lines to grow in mice and test different treatments. They also received cell lines from clients to test.</p>
+
+<p>My job was to build software for the lab workers to use.</p>
+
+<p>When I started, the lab had purchased a slide printer. My first task was to generate QR codes to be printed so they could track projects without hand-labeling every slide. I remember being so proud when I succeeded.</p>
+
+<p>Other projects included working on the inventory management system. In a lab with multiple customers sending multiple samples pertaining to cancer treatment, keeping track of inventory was important. Tracking things like cell line, tumor type, and (anonymized) demographic data about the patient allowed us to build out visualizations.</p>
+
+<p>I gained a ton of experience building dynamic charts/tables and creating software that people actually used. When it was finally time to go on the Fulbright grant, I was sad to leave this job.</p>
+
+<h2 id="fulbright">Fulbright</h2>
+
+<blockquote>
+  <p><strong>English Teaching Assistant</strong><br />
+<em>Fulbright U.S. Student Program - Latvia</em><br />
+September 2021 - January 2022<br />
+Teaching Conversational and Business English in Liepaja, Latvia</p>
+</blockquote>
+
+<p>Arriving in Latvia was chaotic, to put it succinctly. Given the circumstances in the world, it was hard to be certain whether travel would be allowed.</p>
+
+<p>Eventually, though, we got an email saying, “Book your flights! Be here in the next two weeks!”</p>
+
+<p>I did just that.</p>
+
+<p>After more than two years since starting my application, I was there.</p>
+
+<p>My experience deserves its own post, but the long and short of it was: I left a job I loved to come teach in subpar global conditions.</p>
+
+<p>The timing was wrong for me. Devastated as I was to make the call, I returned home.</p>
+
+<p>Briefly, though, I will say:
+I adored my students. They taught me more than I taught them, certainly, and they gave me a sense of confidence in my people and teaching skills that I carry with me at all times.</p>
+
+<p>My previous job was happy to have me back, so I returned for a time.</p>
+
+<h2 id="software-engineering-pt-2">Software Engineering Pt. 2</h2>
+
+<blockquote>
+  <p><strong>Software Engineer</strong><br />
+<em>Champions Oncology Inc.</em><br />
+March 2022 - August 2022<br />
+PHP Web Development, Data Visualization, and Lab Inventory Management System Creation</p>
+</blockquote>
+
+<p>The company had shifted quite a bit in the time I was gone. I was encouraged by coworkers and friends to search for something new, so I threw out a handful of applications.</p>
+
+<p>This job search was the polar opposite of my initial hunt.</p>
+
+<p>I had several interviews and got to be a little more selective with where I ended up. My choice was a higher-education fundraising company.</p>
+
+<blockquote>
+  <p><strong>Software Engineer II</strong><br />
+<em>EverTrue</em><br />
+Sepetember 2022 - March 2024<br />
+Full-Stack Web Development in an Agile Environment</p>
+</blockquote>
+
+<p>Starting this job was exciting. It felt aligned with my perpetual, unspoken mission of service. The people were friendly and seemed supportive.</p>
+
+<p>My experience was unfortunately misaligned with my expectations.</p>
+
+<p>I struggled in the agile environment. I didn’t have a robust understanding of software architecture and felt constantly rushed by the sprints in a way that prevented me from taking a breath and addressing the root of the issue.</p>
+
+<p>Communication was a challenge in a way that ultimately felt like an incompatibility. They accepted that before I did and let me go in a wave of layoffs.</p>
+
+<p>I learned a lot about start-up culture and tech during this time and am grateful for the experience and the team members who connected with me!</p>
+
+<h2 id="a-needed-rest">A Needed Rest</h2>
+
+<blockquote>
+  <p><strong>Healer &amp; Artist</strong><br />
+<em>Self-Employeed</em><br />
+April 2024 - January 2025<br />
+Recovery, Reflection, and Brave Rest</p>
+</blockquote>
+
+<p>This period of time in my life was gloriously terrifying.</p>
+
+<p>I made the bold choice to not look for another job right away. One thing about tech is it afforded me the opportunity to grow a savings account, which I made use of during this time.</p>
+
+<p>Instead of panicking or questioning or searching, I decided to focus on nurturing things outside of my career. Enter improv, writing, piano, etc.</p>
+
+<p>This is my favorite part of this story, but I will refrain from diving in right now. It deserves its own write-up when I am ready.</p>
+
+<p>The amount of knowledge and confidence and capacity I gained during this time was unrivaled. Making the choice to invest in myself, in learning new skills, in shedding insecurity around old skills, and in pushing back against the anxiety projected onto me from my peers and society was the correct choice for me.</p>
+
+<p>As the savings account dwindled, I was forced to evaluate that delicate balance between passions and practicality.</p>
+
+<p>Searching for jobs this time was different still than the first two times. I scanned through listings listening to my heart. I applied for two positions in July of 2024:</p>
+<ul>
+  <li>A science teacher at a local Catholic school</li>
+  <li>A data analyst in my city’s government</li>
+</ul>
+
+<p>The headmaster of the school replied with an urgent sadness, saying she had just given out an offer for the last position they had.</p>
+
+<p>I felt certain the other option was the right one, then.</p>
+
+<h2 id="local-government--data-engineering">Local Government | Data Engineering</h2>
+
+<p>I interviewed for the data analyst position in the fall of 2024 and was not selected. Nobody told me that, though. I emailed two weeks after my interview to ask.</p>
+
+<p>My would-have-been manager replied with some string of fluffy sounding words to say “nope!” and then added, “We have this Data Engineer position open - it closes today. Just click through and apply, we’d love to have you.”</p>
+
+<p>I grimaced and clicked through anyway.</p>
+
+<p>The square wheels turned. I interviewed with an authentically annoyed sense of arrogance. The only question I asked in my final interview was, “Why should I work for you?”</p>
+
+<blockquote>
+  <p><strong>Data Engineer</strong><br />
+<em>City of Pittsburgh</em><br />
+January 2025 - Present<br />
+Everything Under the Sun</p>
+</blockquote>
+
+<p>Local government is something you have to experience to understand.</p>
+
+<p>I wear so many hats - and shoes and dresses and jackets - it’s insane.</p>
+
+<p>Sometimes we’re cloud systems admins, sometimes we’re project managers, and sometimes we’re policy-drafters.</p>
+
+<p>This is another topic that deserves its own post. Working for the City of Pittsburgh has given me a sense of pride and ownership and community in my work that I have never been able to approach in my almost ten year career.</p>
+
+<h2 id="whats-next">What’s Next?</h2>
+
+<p>My passion for my job and my team is unmatched.</p>
+
+<p>If something manages to pull me away from this, it must be the most fulfilling, exciting, novel, interdisciplinary role yet.</p>
+
+<p>We shall see!</p>
+
+<h2 id="thank-you">Thank You!</h2>
+
+<p>Thank you for reading this. I’m honored you took the time to learn about my life story. Writing this was a fun exercise and made me grateful for the culmination of my journey so far.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[My Professional History, Narratively]]></summary></entry><entry><title type="html">Test CSS</title><link href="http://0.0.0.0:4000/2025/08/14/testcss/" rel="alternate" type="text/html" title="Test CSS" /><published>2025-08-14T00:00:00-04:00</published><updated>2025-08-14T00:00:00-04:00</updated><id>http://0.0.0.0:4000/2025/08/14/testcss</id><content type="html" xml:base="http://0.0.0.0:4000/2025/08/14/testcss/"><![CDATA[<p>@import “main”;</p>]]></content><author><name></name></author><summary type="html"><![CDATA[@import “main”;]]></summary></entry><entry><title type="html">First Post</title><link href="http://0.0.0.0:4000/2025/08/14/title/" rel="alternate" type="text/html" title="First Post" /><published>2025-08-14T00:00:00-04:00</published><updated>2025-08-14T00:00:00-04:00</updated><id>http://0.0.0.0:4000/2025/08/14/title</id><content type="html" xml:base="http://0.0.0.0:4000/2025/08/14/title/"><![CDATA[<p>Hey folks, I’m working through the Github Pages tutorial right now.
 Honestly, not having a ton of fun - super nervous for some reason - but I’m pushing through.
 Hell yeah.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Hey folks, I’m working through the Github Pages tutorial right now. Honestly, not having a ton of fun - super nervous for some reason - but I’m pushing through. Hell yeah.]]></summary></entry></feed>
