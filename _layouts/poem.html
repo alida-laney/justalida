@@ -6,7 +6,7 @@ layout: landing
   <h1>{{ page.title | escape }}</h1>
 
   <p class="poem-date">
-    {%- assign date_format = "%B %Y" -%}
+    {%- assign date_format = "%B %-d, %Y" -%}
     {{ page.date | date: date_format }}
   </p>
 
