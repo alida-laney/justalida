@@ -3,7 +3,7 @@ title: "Twenty Twenty Five"
 layout: poem
 date: 2025-12-31
 tags: [reflection, accomplishment]
-excerpt: "still, though, i feel compelled"
+excerpt: "The message I've sent myself is clear"
 ---
 
 Another year has passed.
