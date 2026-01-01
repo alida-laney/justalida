@@ -3,7 +3,7 @@ title: "exhaustion"
 layout: poem
 date: 2024-08-25
 tags: [reflection, documenting, memory]
-excerpt: "there are no more decisions to be made"
+excerpt: "still, though, i feel compelled"
 ---
 
 it occurred to me  
