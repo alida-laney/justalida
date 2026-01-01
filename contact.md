@@ -15,7 +15,7 @@ title: Contact
 </p>
 
 <div class="content-section contact-section">
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+  <form action="https://formspree.io/f/mnjnawrn" method="POST" class="contact-form">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
