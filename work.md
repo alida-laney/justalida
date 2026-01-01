@@ -42,3 +42,11 @@ title: Work
   </div>
   {% endfor %} -->
 </div>
+
+
+<p>
+  <span class="accent-dot yellow"></span>
+  <span class="accent-dot purple"></span>
+  <span class="accent-dot pink"></span>
+  <span class="accent-dot blue"></span>
+</p>
