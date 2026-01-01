@@ -32,7 +32,7 @@ In commemoration of this year, I published this website today.
 
 At long last, my private, closely kept project is unleashed.  
 
-There’s no need for resolutions;
+There’s no need for resolutions;  
 The message I've sent myself is loud and clear:  
 
 **Keep the ball rolling into the new year!**  
