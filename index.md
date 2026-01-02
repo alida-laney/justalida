@@ -11,7 +11,7 @@ title: Welcome
   <span class="accent-dot yellow"></span>
 </p>
 
-<p class="subtitle">~ Hello and Welcome ~</p>
+<p class="subtitle">~ Hello & Welcome ~</p>
 
 <div class="content-section centered">
   <p>I'm glad you've found my little corner of the internet.</p>
