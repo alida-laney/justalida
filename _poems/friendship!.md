@@ -46,7 +46,7 @@ Ended it chatty as ever.
 
 There was a moment in that call  
 Where my heart felt so full and humbled.  
-‘She needs me.’  
+*‘She needs me.’*  
 
 After those years,  
 Spent desperately needing you,  
