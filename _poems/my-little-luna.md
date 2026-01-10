@@ -17,6 +17,6 @@ Because she is so loved
 And so deserving.  
 
 My little Luna  
-is a shining light in my life.  
+Is a shining light in my life.  
 She has loved me at my worst,  
 Always finding me deserving.  
