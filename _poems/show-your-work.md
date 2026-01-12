@@ -3,7 +3,7 @@ title: "Show Your Work"
 layout: poem
 date: 2026-01-12
 tags: [vulnerability, self-doubt, reflection]
-excerpt: "Year after year."
+excerpt: "I think that's what I've done here"
 ---
 
 Public school drilled this habit into me.  
