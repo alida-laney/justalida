@@ -2,6 +2,7 @@
 title: "Show Your Work"
 layout: poem
 date: 2026-01-12
+order: 2
 tags: [vulnerability, self-doubt, reflection]
 excerpt: "I think that's what I've done here"
 ---

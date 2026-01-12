@@ -15,7 +15,8 @@ title: Work
 </p>
 
 <div class="work-grid">
-  {% assign sorted_poems = site.poems | sort: 'date' %}
+  {% assign sorted_poems = site.poems | sort: 'date' | reverse %}
+  {% assign sorted_poems = sorted_poems | sort: 'order' %}
   {% for poem in sorted_poems %}
   <div class="work-item poem-item">
     <h3><a href="{{ poem.url | relative_url }}">{{ poem.title }}</a></h3>

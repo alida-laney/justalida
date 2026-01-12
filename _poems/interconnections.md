@@ -2,6 +2,7 @@
 title: "Interconnections"
 layout: poem
 date: 2026-01-12
+order: 1
 tags: [learning, connection, newness]
 excerpt: "This is radical"
 ---

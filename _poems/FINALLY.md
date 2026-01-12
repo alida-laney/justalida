@@ -2,8 +2,9 @@
 title: "FINALLY"
 layout: poem
 date: 2026-01-12
+order: 3
 tags: [voices, change, relief, pride, accomplishment]
-excerpt: ""
+excerpt: "Years, endless years..."
 ---
 
 Years, endless years  
@@ -34,7 +35,7 @@ Big.
 
 I don’t care if it’s, what, six people?  
 It’s more than me,  
-Finally!   
+Finally!  
 It’s more than just me.  
 
 Thank you.  

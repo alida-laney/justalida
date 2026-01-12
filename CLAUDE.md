@@ -1,6 +1,6 @@
 # Claude Code Context for justalida.com
 
-This file contains context and todos for working on Alida's personal website.
+THIS FILE IS INCREDIBLY OUTDATED
 
 ## Site Overview
 
