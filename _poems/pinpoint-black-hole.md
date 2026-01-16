@@ -3,7 +3,7 @@ title: "Pinpoint Black Hole"
 layout: poem
 date: 2026-01-16
 tags: [noticing, description, presence]
-excerpt: "the symbol... traverses layers of interpretation"
+excerpt: "The symbol traverses layers of interpretation"
 ---
 
 I often think of the significance of symbols.  

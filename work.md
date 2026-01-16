@@ -15,9 +15,11 @@ title: Work
 </p>
 
 <div class="work-grid">
-  {% assign sorted_poems = site.poems | sort: 'date' | reverse %}
-  {% assign sorted_poems = sorted_poems | sort: 'order' %}
-  {% for poem in sorted_poems %}
+  {% assign poems_by_date = site.poems | group_by_exp: "poem", "poem.date | date: '%Y-%m-%d'" %}
+  {% assign sorted_date_groups = poems_by_date | sort: 'name' %}
+  {% for date_group in sorted_date_groups %}
+    {% assign poems_in_date = date_group.items | sort: 'order' %}
+    {% for poem in poems_in_date %}
   <div class="work-item poem-item">
     <h3><a href="{{ poem.url | relative_url }}">{{ poem.title }}</a></h3>
     <p class="poem-date-small">{{ poem.date | date: "%B %-d, %Y" }}</p>
@@ -25,6 +27,7 @@ title: Work
     <p class="excerpt">{{ poem.excerpt }}</p>
     {% endif %}
   </div>
+    {% endfor %}
   {% endfor %}
 
   <!-- {% assign sorted_art = site.art | sort: 'date' %}
