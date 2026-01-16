@@ -7,10 +7,10 @@ excerpt: "The symbol traverses layers of interpretation"
 ---
 
 I often think of the significance of symbols.  
-When a shape, word, person, or moment becomes **representative**,  
+When a shape, word, person, or moment becomes *representative*,  
 It gains a quality.  
 
-I call this quality **density**.  
+I call this quality *density*.  
 For whatever the symbol is, its meaning  
 Traverses layers of interpretation  
 Beyond simplistic truth.  
@@ -25,6 +25,6 @@ Noticing the density and not allowing myself to be pulled by it
 Has fueled the development of my own center of gravity.  
 
 All that is to say,  
-**Growth**  
+*Growth*  
 Is often expansive awareness  
 Combined with selective reactivity.  
