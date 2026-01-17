@@ -48,7 +48,3 @@ Thinking the words would hold that feeling forever
 
 But, as it turns out,  
 Forever is just a word, too  
-
----
-
-#language #meaning #change #healing #processing
