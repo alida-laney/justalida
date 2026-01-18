@@ -52,6 +52,6 @@ Making it worse,
 Until, one day,  
 It breaks.  
 And then, I’ll think,  
-Serves me right,  
+*Serves me right,*  
 *It’s all my fault.*  
 *It’s always all my fault.*  
