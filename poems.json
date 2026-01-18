@@ -1,0 +1,19 @@
+---
+layout: null
+---
+{
+  "generated": "{{ site.time | date_to_xmlschema }}",
+  "count": {{ site.poems.size }},
+  "poems": [
+    {%- assign sorted_poems = site.poems | sort: "date" -%}
+    {%- for poem in sorted_poems %}
+    {
+      "title": {{ poem.title | jsonify }},
+      "date": "{{ poem.date | date: '%Y-%m-%d' }}",
+      "tags": {{ poem.tags | jsonify }},
+      "url": "{{ site.url }}{{ poem.url }}",
+      "content": {{ poem.content | strip_html | strip | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
