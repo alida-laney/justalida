@@ -12,7 +12,7 @@ It was tucked away in its own box,
 Branded with the logo of the now-extinct department store  
 From whence it came…  
 
-I have never been a jewelry person.
+I have never been a jewelry person.  
 When I was younger, it was because it was a signifier of ‘woman,’  
 And I wanted to be anything but.  
 Later, it was resentment from all the pieces purchased  
@@ -36,7 +36,8 @@ Like an unexpected tsunami.
 
 I put the necklace on anyway.  
 I traced over the slightly warped section,  
-Hoping the love and agitation from my fingers could undo the negligent damage done.  
+Hoping the love and agitation from my fingers could undo the  
+negligent damage done.  
 In my heart, I vowed to learn from this,  
 To take it as a lesson that reckless motion can cause permanent disruption.  
 
