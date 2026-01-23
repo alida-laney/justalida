@@ -15,7 +15,7 @@ if you read my work,
 they’re all over.  
 
 i love those ones where you say,  
-*it’s so big in so many directions!*. 
+*it’s so big in so many directions!*  
 and there’s nothing to do but be with it.  
 
 he made me better at being with these kinds of feelings.  
@@ -31,7 +31,7 @@ he told me it wasn’t my fault.
 he told me a lot of things i guess he could only say once it was over.  
 
 for a long time, i whispered to myself,  
-*it will be worth it on the other side,*. 
+*it will be worth it on the other side,*  
 and i’m only here just barely,  
 
 but  
