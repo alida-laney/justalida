@@ -3,7 +3,7 @@ title: "are you ok?"
 layout: poem
 date: 2026-01-23
 tags: [heartbreak, ending, confidence, presence]
-excerpt: "Take control of your calm."
+excerpt: "a funny feeling"
 ---
 
 heartbreak is a funny feeling.  
