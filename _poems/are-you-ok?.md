@@ -47,7 +47,7 @@ coming from him.
 he’s a good person, too.  
 
 i could go on all night.  
-it’s one of those feelings i love  
+it’s one of those feelings i have to love  
 because it just feels  
 
 like life.  
