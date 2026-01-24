@@ -9,8 +9,8 @@ excerpt: "This eased my pain."
 Pain sits in my chest,  
 Unmoving,  
 
-Like vat of purplish-redish, viscous fluid;  
-A bruise made of mucous,  
+Like a vat of purplish-redish, viscous fluid;  
+Like a bruise made of mucous,  
 The kind that lingers in your lungs after a persistent cold.  
 
 I moan and groan, yet  
@@ -33,5 +33,5 @@ It seems, these days,
 Even in the worst moments,  
 My metabolism is tuned to refine darkness into light.  
 
-I am shocked to report,  
+I am shocked to report:  
 This eases my pain.  
