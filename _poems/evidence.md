@@ -43,8 +43,8 @@ Just this morning, a sign came.
 As I loaded my car for the final time,  
 Fleeing a home that imprisoned me,  
 I turned on the bathroom light  
-To find the bulb  
-Above my former sink  
+To find the bulb above  
+My former sink  
 Burnt out.  
 
 That’s evidence enough, for me.  
