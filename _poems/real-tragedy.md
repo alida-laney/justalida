@@ -29,14 +29,15 @@ Change has saved me, and so,
 With hope and care, I tended to your goodness,  
 Neverminding the thorn-pricks of your fear.  
 
-I saw all the darkness and loved across it.
+I saw all the darkness and loved across it.  
 I placed seeds of faith into the cracks of your concrete,  
 Hoping soil would find its way to me.  
 
 I was too weary to find my own soil back then.  
 I will forgive myself, in time.  
 
-Our friends tell me you’re moving like you know you did something wrong.  
+Our friends tell me you’re moving  
+Like you know you did something wrong.  
 I can’t imagine why.  
 
 Starving a woman for personhood,  
