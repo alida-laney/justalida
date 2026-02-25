@@ -27,7 +27,7 @@ I am always angry.
 There’s no failure in that; Look around,  
 There’s plenty to be angry about.  
 
-The failure is in letting anger exhaust you,
+The failure is in letting anger exhaust you,  
 Instead of fuel you.  
 
 Anger reminds me to feed myself every day.  
