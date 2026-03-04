@@ -2,8 +2,8 @@
 title: "Wave After Wave"
 layout: poem
 date: 2026-03-04
-tags: []
-excerpt: ""
+tags: [surrender, flow, freedom, sovereignty, dignity, power, diversity]
+excerpt: "I am fifteen feet off the beach"
 ---
 
 Stunned silence.  
