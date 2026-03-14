@@ -42,8 +42,8 @@ At a certain point,
 Acceptance hung over me  
 Like an unforgiving weighted blanket.  
 
-If I felt like I was safe here,  
-I would feel moved to settle in.  
+*If I felt like I was safe here,*  
+*I would feel moved to settle in.*  
 
 But I’d already told the homeowner that,  
 Many times,  
