@@ -206,6 +206,13 @@ body {
 }
 
 .poem-dedication {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--light-gray);
+  text-align: center;
+}
+
+.poem-dedication .dedication {
   font-size: 0.85rem;
   font-style: italic;
   color: #999;
@@ -213,7 +220,7 @@ body {
 }
 
 .poem-tags {
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--light-gray);
   text-align: center;

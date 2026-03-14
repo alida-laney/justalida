@@ -14,14 +14,20 @@ layout: landing
     {{ content }}
   </div>
 
-  {%- if page.tags.size > 0 or page.dedication -%}
+  {%- if page.tags.size > 0 -%}
   <div class="poem-tags">
     {%- for tag in page.tags -%}
       <span class="tag">#{{ tag }}</span>
     {%- endfor -%}
+  </div>
+  {%- endif -%}
+
+  {%- if page.dedication -%}
+  <div class="poem-dedication">
     {%- if page.dedication -%}
-    <p class="poem-dedication">for {{ page.dedication }}</p>
+    <p class="dedication">for {{ page.dedication }}</p>
     {%- endif -%}
   </div>
   {%- endif -%}
+
 </article>
