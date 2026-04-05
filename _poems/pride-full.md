@@ -30,8 +30,8 @@ It didn’t squish me.
 
 Instead,  
 I owned my survivorship on the internet,  
-I sent an email to my therapist, and  
-I got in bed.  
+I sent an email to my therapist,  
+And I got in bed.  
 
 The last time these memories hit,  
 They were maggots.  
