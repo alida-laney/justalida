@@ -5,6 +5,7 @@ date: 2026-04-10
 tags: [anger, pain, loss, friendship, body]
 excerpt: "It was too loud to hear the pins drop."
 dedication: "Mr. Honesty, as you chose not rise to Mr. Integrity."
+hidden: true
 ---
 
 Hunched over the machine,  
