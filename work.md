@@ -20,6 +20,7 @@ title: Work
   {% for date_group in sorted_date_groups %}
     {% assign poems_in_date = date_group.items | sort: 'order' %}
     {% for poem in poems_in_date %}
+    {% if poem.hidden %}{% continue %}{% endif %}
   <div class="work-item poem-item">
     <h3><a href="{{ poem.url | relative_url }}">{{ poem.title }}</a></h3>
     <p class="poem-date-small">{{ poem.date | date: "%B %-d, %Y" }}</p>
