@@ -2,7 +2,7 @@
 title: "Dewdrops"
 layout: poem
 date: 2026-02-12
-tags: [reflection, acceptance, presence, rest]
+tags: [reflection, acceptance, presence, rest, diversity]
 excerpt: "I am fine mist"
 ---
 
