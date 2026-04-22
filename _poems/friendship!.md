@@ -2,7 +2,7 @@
 title: "Friendship!"
 layout: poem
 date: 2026-01-09
-tags: [reflection, joy, love, honor]
+tags: [reflection, joy, love, honor, friendship]
 excerpt: "People say 'Community is inconvenient.'"
 ---
 
