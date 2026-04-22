@@ -2,6 +2,7 @@
 title: "visions"
 layout: poem
 date: 2025-04-21
+published: 2025-12-31
 tags: [uncertainty, noticing, acceptance, preparation]
 excerpt: "i am detaching from the things i held onto."
 ---

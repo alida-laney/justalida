@@ -2,6 +2,7 @@
 title: "decisions"
 layout: poem
 date: 2024-07-29
+published: 2025-12-31
 tags: [patience, voices, oscillating, faith]
 excerpt: "there are no more decisions to be made"
 ---

@@ -2,6 +2,7 @@
 title: "For You"
 layout: poem
 date: 2025-11-13
+published: 2025-12-31
 tags: [gratitude, hope]
 excerpt: "I am so grateful for your time."
 ---

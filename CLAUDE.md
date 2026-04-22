@@ -3,111 +3,170 @@
 ## Site Overview
 
 **Domain**: justalida.com (GitHub Pages with custom domain)
-**Purpose**: Personal website showcasing Alida's creative work, projects, and healing journey
+**Purpose**: Personal creative website — cartography as metaphor. Alida's poems, essays, and other work, plus professional offerings and connection.
 **Architecture**: Jekyll-based static site
+**Active branch**: `site-structure-revamp` (not yet merged to main)
 
-## Current Site Structure
+---
 
-### Navigation
-- **Home** (`/home/`) - Short introduction to the site
-- **Work** (`/work/`) - Main page of the site, shows work chronologically (oldest -> newest)
-- **Contact** (`/contact/`) - Form to send me an email
+## Site Structure & Navigation
 
-### Key Features
+Nav: **home** | **explore** (dropdown) | **contact**
 
-#### 1. Tagging & Theme System
-- Each piece tagged with themes (language, healing, technical-projects, etc.)
-- Could be used later to create a filtering system on the work page
+The explore dropdown links to:
+- **Open Seas** (`/seas/`) — all work chronologically, oldest → newest, with tag filtering
+- **Farmlands** (`/farmlands/`) — curated collections ("fields")
+- **Roads** (`/roads/`) — not yet built
 
-#### 2. Layouts
-- Currently only utilizing the 'poem' layout
-- Visual art to be added later
+Static pages at root: `index.md`, `seas.md`, `farmlands.md`, `roads.md`, `contact.md`, `work.md` (legacy, shows a "things are different" notice)
 
-## Content Structure
+---
 
-### Front Matter Format
+## Content Collections
+
+### Poems — `_poems/filename.md`
 ```yaml
 ---
-title: "TITLE"
+title: "Title"
 layout: poem
-date: 2026-01-18
-order: 3
-tags: [tag1, tag2, tag3]
-excerpt: "A little quote :)"
+date: 2026-01-18        # date written
+published: 2025-12-31   # date added to site (omit if written & published same day)
+tags: [tag1, tag2]
+excerpt: "A short quote"
+dedication: "person"    # optional
+order: 3                # optional, for same-day ordering
 ---
 ```
+- Poems dated before 2026-01-01 have `published: 2025-12-31` (site launch date)
+- Line breaks in poems use two trailing spaces (`  `)
 
-### File Locations
-- **Poems**: `_poems_/filename.md`
-- **Visual Art**: `_art_/art_file.md`
-- **Static pages**: Root directory (index.md, work.md, contact.md)
+### Posts — `_posts/YYYY-MM-DD-title.md`
+Standard Jekyll posts. Can include `tags` for filtering on Seas.
 
-## Technical Notes
+### Fields (Curated Collections) — `_fields/field-name.md`
+```yaml
+---
+title: "Field Title"
+layout: field           # auto-applied via _config.yml default
+description: "One line description."
+order: 1                # sort order on Farmlands page
+symbol: star            # any legend symbol name (see below)
+color: pink             # any palette color name (see below)
+works:
+  - slug: poem-filename-without-extension
+    collection: poems
+  - slug: post-slug
+    collection: posts
+---
+```
+- Works can appear in multiple fields
+- Slug matching uses `where_exp` on `p.path contains work.slug`
+- Field pages live at `/fields/field-name/`
 
-### Development Environment
-- **Local dev**: `./dev.sh` or `bundle exec jekyll serve --drafts --livereload`
-- **Build**: `bundle exec jekyll build`
+---
 
-### Key Files
-- **Config**: `_config.yml` - Jekyll configuration, collections setup
-- **Main filter page**: `creations.md` - Contains all filtering HTML/CSS/JS
-- **Content layout**: `_layouts/content.html` - Unified layout for all content types
-- **Tag pages**: `_layouts/tag_page.html` - Individual theme pages
+## Design System
 
-### Deployment
-- **Main branch**: Auto-deploys to justalida.com via GitHub Actions
-- **Custom domain**: CNAME file points to justalida.com
-- **Workflow**: `.github/workflows/jekyll.yml`
+### Palette (CSS variables in `assets/css/main.scss`)
+| Variable | Hex | Use |
+|---|---|---|
+| `--cream` | `#f8f5f0` | Page background |
+| `--charcoal` | `#4a4a4a` | Body text |
+| `--light-gray` | `#e8e3db` | Borders, dividers |
+| `--soft-blue` | `#89c5d4` | Links, active states |
+| `--soft-purple` | `#c9aed6` | Accent |
+| `--soft-pink` | `#f4b8c4` | Accent |
+| `--soft-yellow` | `#f9e4a0` | Accent |
+| `--soft-orange` | `#f5c78e` | Accent |
+| `--soft-green` | `#a8c5a0` | Accent |
+| `--soft-brown` | `#c4a882` | Accent |
 
-### User Experience
-- **No jarring interactions** - smooth, stays-in-place
-- **Mobile-friendly** - responsive design throughout
-- **Performance** - lightweight, fast loading
+Color class names (apply to any symbol): `.purple` `.pink` `.blue` `.yellow` `.orange` `.green` `.brown`
 
-### Future Vision
-- **Text editor UI** - Direct content creation through web interface  
-- **Performance calendar** - Integration with live events
-- **Services offerings** - Professional services based on human conenction
+### Legend Symbols
+Symbols and colors are independent — mix freely: `<span class="accent-triangle pink"></span>`
 
-## Common Commands
+| Class | Glyph | Name |
+|---|---|---|
+| `.accent-triangle` | ▲ | triangle |
+| `.accent-square` | ■ | square |
+| `.accent-star` | ★ | star |
+| `.accent-water` | ≈ | water |
+| `.accent-target` | ⊙ | target |
+| `.accent-compass` | ✦ | compass |
+| `.accent-asterisk` | ✳ | asterisk (reserved) |
+| `.accent-circle` | ● | circle (reserved) |
 
-### Development
+All symbols share a subtle brown text-shadow outline via CSS.
+
+### Key CSS Classes
+- `.landing-page` — page wrapper, max-width 700px, centered
+- `.content-section` — white card with shadow (used everywhere)
+- `.index-section` — fixed 450px centered wrapper (index page)
+- `.connect-section` — fixed 500px centered wrapper (connect page)
+- `.seas-grid` — max-width 600px centered, used for work listings
+- `.intro-box` — pale blue (`#f4f9fb`) italic box for verse/quotes
+- `.card-link` — makes a whole `.content-section` clickable
+- `.filter-btn` — pill button for Seas tag filters
+- `.seas-item` — individual work card
+- `.work-nav` — prev/next navigation at bottom of poem pages
+- `.summary-text` / `.summary-title` / `.summary-sub` — details/summary styling (Connect page)
+- `.link-item` / `.link-desc` — link with description below (Connect page)
+
+### Background
+Faint topographic contour lines on `body` via SVG `background-image`.
+
+---
+
+## Prev/Next Navigation (poem layout)
+
+Works are navigable with `?context=` URL param:
+- No param or `?context=seas` → chronological order (all poems + posts by date)
+- `?context=field-slug` → order from that field's `works` list
+
+Field pages automatically append `?context={{ page.slug }}` to work links. Context carries through prev/next clicks.
+
+---
+
+## Layouts
+
+- `landing.html` — all pages (includes nav + contour background)
+- `poem.html` — extends landing, adds prev/next nav with JS-embedded order data
+- `field.html` — extends landing, renders works list from frontmatter
+- `post.html` — extends default (minima), for `_posts`
+- `tag_page.html` — individual theme tag pages
+
+---
+
+## Development
+
 ```bash
-# Start local development server
+# Start local dev server (must restart for _config.yml changes)
 ./dev.sh
+# or
+bundle exec jekyll serve --drafts --livereload
 
-# Build site
+# Build
 bundle exec jekyll build
-
-# Install dependencies  
-bundle install
 ```
 
-### Git Workflow
-```bash
-# Current branch
-git checkout initial_development
+**Important**: `_config.yml` changes require a full server restart — livereload does not pick them up.
 
-# Commit changes
-git add .
-git commit -m "Description
+---
 
-🤖 Generated with [Claude Code](https://claude.ai/code)
+## Deployment
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+- `main` branch auto-deploys to justalida.com via GitHub Actions
+- Custom domain via CNAME file
+- Workflow: `.github/workflows/jekyll.yml`
+- Current work is on `site-structure-revamp` branch, not yet in production
 
-# Push to remote
-git push origin initial_development
-```
+---
 
-### Content Creation
-1. Create file in `_poems/filename.md`
-2. Add proper front matter with `type`, `tags`, `content_id`
-3. Write content with line breaks (`  ` at end of lines for poems)
-4. Build and test locally
-5. Content appears automatically in `/work/`
+## Guiding Principles
 
-## Notes for Future Sessions
-- Alida values authentic, vulnerable communication balanced with technical rigor
-- The site serves both creative expression and professional technical work
-- Focus on user experience - smooth, non-jarring interactions
+- **Cartography as brand** — maps, terrain, waypoints, water as recurring metaphors
+- **No jarring interactions** — smooth, stays-in-place, non-disruptive UX
+- **Chronology matters** — date written is sacred; `published` field distinguishes archive additions
+- **Mobile-friendly** — test on real devices for touch behavior
+- **Lightweight** — no JS frameworks, no build tools beyond Jekyll

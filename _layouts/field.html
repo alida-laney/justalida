@@ -1,0 +1,52 @@
+---
+layout: landing
+---
+
+{% assign symbol_class = "accent-" | append: page.symbol %}
+
+<h1>
+  <span class="{{ symbol_class }} {{ page.color }}"></span>
+  {{ page.title }}
+  <span class="{{ symbol_class }} {{ page.color }}"></span>
+</h1>
+
+{% if page.description %}
+<p class="subtitle">{{ page.description }}</p>
+{% endif %}
+
+<p>
+  <span class="accent-water blue"></span>
+  <span class="accent-water blue"></span>
+  <span class="accent-water blue"></span>
+</p>
+
+<div class="seas-grid">
+  {% for work in page.works %}
+    {% if work.collection == 'poems' %}
+      {% assign item = site.poems | where_exp: "p", "p.path contains work.slug" | first %}
+    {% elsif work.collection == 'prose' %}
+      {% assign item = site.prose | where_exp: "p", "p.path contains work.slug" | first %}
+    {% else %}
+      {% assign item = nil %}
+    {% endif %}
+
+    {% if item %}
+    <div class="seas-item">
+      <span class="seas-type">{{ work.collection | remove: 's' }}</span>
+      <h3><a href="{{ item.url | relative_url }}?context={{ page.slug }}">{{ item.title }}</a></h3>
+      <p class="seas-date">{{ item.date | date: "%B %-d, %Y" }}</p>
+      {% assign display_excerpt = item.description | default: item.excerpt %}
+      {% if display_excerpt and display_excerpt != "" %}
+      <p class="seas-excerpt">{{ display_excerpt }}</p>
+      {% endif %}
+    </div>
+    {% else %}
+    <div class="seas-item seas-item--missing">
+      <span class="seas-type">{{ work.collection }}</span>
+      <p class="seas-excerpt">{{ work.slug }} <em>(not found)</em></p>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<p><a href="{{ '/farmlands/' | relative_url }}" class="back-link">← Farmlands</a></p>

@@ -2,6 +2,7 @@
 title: "Omnipresence"
 layout: poem
 date: 2024-11-03
+published: 2025-12-31
 tags: [presence, dissociation, reflection, growth, acceptance]
 excerpt: "At the center of my mind..."
 ---

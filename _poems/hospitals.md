@@ -2,6 +2,7 @@
 title: "hospitals"
 layout: poem
 date: 2025-01-30
+published: 2025-12-31
 tags: [trauma, voices, resilience, processing]
 excerpt: "trauma unprocessed is heavy on my heart today."
 ---

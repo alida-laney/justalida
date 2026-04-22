@@ -2,6 +2,7 @@
 title: "What If,"
 layout: poem
 date: 2023-03-28
+published: 2025-12-31
 tags: [intellectualizing, voices, perspective, persistence]
 excerpt: "I think, therefore I am"
 ---

@@ -8,12 +8,30 @@
 </head>
 <body>
   <nav class="main-nav">
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/work/' | relative_url }}">Work</a>
-    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    <a href="{{ '/' | relative_url }}">home</a>
+    <div class="nav-dropdown">
+      <span class="nav-dropdown-trigger">explore</span>
+      <div class="nav-sub">
+        <a href="{{ '/seas/' | relative_url }}">Open Seas</a>
+        <a href="{{ '/farmlands/' | relative_url }}">Farmlands</a>
+        <a href="{{ '/roads/' | relative_url }}">Roads</a>
+      </div>
+    </div>
+    <a href="{{ '/contact/' | relative_url }}">contact</a>
   </nav>
 
-  <div class="landing-page">
+  <script>
+    document.querySelector('.nav-dropdown-trigger').addEventListener('click', function() {
+      this.closest('.nav-dropdown').classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+      }
+    });
+  </script>
+
+  <div class="landing-page{% if page.page_class %} {{ page.page_class }}{% elsif page.layout == 'post' %} post-page{% endif %}">
     {{ content }}
   </div>
 </body>

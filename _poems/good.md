@@ -2,6 +2,7 @@
 title: "Good"
 layout: poem
 date: 2024-04-26
+published: 2025-12-31
 tags: [cycles, persistence, abundance]
 excerpt: "I feel so good about this one..."
 ---

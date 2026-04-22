@@ -2,6 +2,7 @@
 title: "Aftermath"
 layout: poem
 date: 2024-01-11
+published: 2025-12-31
 tags: [change, bitterness, hostility]
 excerpt: "My emotions are at peace."
 ---

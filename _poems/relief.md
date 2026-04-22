@@ -2,6 +2,7 @@
 title: "Relief"
 layout: poem
 date: 2025-11-02
+published: 2025-12-31
 tags: [noticing, change, body]
 excerpt: "The utter relief of knowing something is not for me..."
 ---

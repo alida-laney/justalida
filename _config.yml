@@ -18,9 +18,27 @@ collections:
   poems:
     output: true
     permalink: /poems/:title/
+  prose:
+    output: true
+    permalink: /prose/:title/
   art:
     output: true
     permalink: /art/:title/
+  fields:
+    output: true
+    permalink: /fields/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: fields
+    values:
+      layout: field
+  - scope:
+      path: ""
+      type: prose
+    values:
+      layout: post
 
 # Tag settings
 tag_page_layout: tag_page

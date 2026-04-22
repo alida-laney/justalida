@@ -2,6 +2,7 @@
 title: "a martini in the fridge"
 layout: poem
 date: 2025-06-22
+published: 2025-12-31
 tags: [love, gratitude, presence, abundance]
 excerpt: "i feel dearly-loved"
 ---

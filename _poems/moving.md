@@ -2,6 +2,7 @@
 title: "Moving"
 layout: poem
 date: 2025-12-29
+published: 2025-12-31
 tags: [hope, presence, relief]
 excerpt: "It's a highlight moment"
 ---

@@ -1,10 +1,10 @@
 ---
-title: "Resume"
+title: "My Professional History, Narratively"
 date: 2025-09-22
+description: "Biology to data science to engineering, in story format."
+tags: [storytelling, about-me, history]
 layout: post
 ---
-
-# My Professional History, Narratively
 
 ## Background
 

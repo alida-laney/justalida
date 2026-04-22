@@ -2,6 +2,7 @@
 title: "My Little Luna"
 layout: poem
 date: 2025-04-19
+published: 2025-12-31
 tags: [presence, love]
 excerpt: "She is so loved and so deserving."
 ---

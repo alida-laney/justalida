@@ -31,3 +31,34 @@ layout: landing
   {%- endif -%}
 
 </article>
+
+<nav class="work-nav" id="work-nav"></nav>
+
+<script>
+  {% assign seas_items = site.poems | concat: site.prose | sort: 'date' %}
+  const seasOrder = [{% for item in seas_items %}{"url":"{{ item.url | relative_url }}","title":{{ item.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+  const fieldsOrder = {
+    {% for field in site.fields %}"{{ field.slug }}": [{% for work in field.works %}{% if work.collection == 'poems' %}{% assign item = site.poems | where: "slug", work.slug | first %}{% elsif work.collection == 'posts' %}{% assign item = site.prose | where: "slug", work.slug | first %}{% else %}{% assign item = nil %}{% endif %}{% if item %}{"url":"{{ item.url | relative_url }}","title":{{ item.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}]{% unless forloop.last %},{% endunless %}{% endfor %}
+  };
+
+  const currentUrl = window.location.pathname;
+  const params = new URLSearchParams(window.location.search);
+  const context = params.get('context');
+
+  const list = (context && context !== 'seas' && fieldsOrder[context])
+    ? fieldsOrder[context]
+    : seasOrder;
+
+  const idx = list.findIndex(item => item.url === currentUrl);
+
+  if (idx !== -1) {
+    const prev = idx > 0 ? list[idx - 1] : null;
+    const next = idx < list.length - 1 ? list[idx + 1] : null;
+    const suffix = context ? '?context=' + encodeURIComponent(context) : '';
+    const nav = document.getElementById('work-nav');
+    nav.innerHTML =
+      (prev ? '<a href="' + prev.url + suffix + '" class="work-nav-link work-nav-prev">← ' + prev.title + '</a>' : '<span></span>') +
+      (next ? '<a href="' + next.url + suffix + '" class="work-nav-link work-nav-next">' + next.title + ' →</a>' : '<span></span>');
+  }
+</script>

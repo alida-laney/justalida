@@ -2,6 +2,7 @@
 title: "Compartmentalize"
 layout: poem
 date: 2025-11-24
+published: 2025-12-31
 tags: [confusion, frustration, oscillation]
 excerpt: "Don't trauma dump."
 ---

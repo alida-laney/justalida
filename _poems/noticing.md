@@ -2,6 +2,7 @@
 title: "Noticing"
 layout: poem
 date: 2023-03-02
+published: 2025-12-31
 tags: [feeling, dissociation, intellectualizing, breathing]
 excerpt: "Noticing is the first and most important step in learning to feel your feelings."
 ---

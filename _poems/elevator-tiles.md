@@ -2,6 +2,7 @@
 title: "Elevator Tiles"
 layout: poem
 date: 2025-03-10
+published: 2025-12-31
 tags: [noticing, perspective]
 excerpt: "Worn unevenly..."
 ---

@@ -2,6 +2,7 @@
 title: "Fun"
 layout: poem
 date: 2025-04-29
+published: 2025-12-31
 tags: [confusion, presence, noticing]
 excerpt: "Write because it's fun."
 ---

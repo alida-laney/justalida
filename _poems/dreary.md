@@ -2,6 +2,7 @@
 title: "dreary"
 layout: poem
 date: 2025-04-10
+published: 2025-12-31
 tags: [presence, acceptance, persistence, perspective]
 excerpt: "there's beauty in these parts"
 ---
