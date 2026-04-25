@@ -3,7 +3,8 @@ title: "A Siren On A Dance Floor"
 layout: poem
 date: 2026-04-25
 tags: [processing, queerness, magnetism]
-excerpt: "her ~ thank you"
+excerpt: "I kiss a woman in a nightclub..."
+dedication: "her ~ thank you"
 ---
 
 I kiss a woman in a nightclub… or,  
