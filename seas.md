@@ -14,7 +14,7 @@ page_class: seas-page
   <span class="accent-water blue"></span>
 </p>
 
-{% assign all_items = site.poems | concat: site.prose | sort: 'date' %}
+{% assign all_items = site.poems | concat: site.prose | sort: 'order' | sort: 'date' %}
 
 {% assign all_tags = "" | split: "" %}
 {% for item in all_items %}
@@ -31,6 +31,9 @@ page_class: seas-page
   <button class="filter-btn active" data-tag="all">all</button>
   <button class="filter-btn" id="recent-btn">most recent</button>
   <span class="seas-filter-divider">|</span>
+  <button class="filter-btn" id="tag-toggle">tags ▴</button>
+</div>
+<div id="tag-filters" style="margin-top:0.5rem; display:block;">
   {% for tag in all_tags %}
   <button class="filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
   {% endfor %}
@@ -46,7 +49,7 @@ page_class: seas-page
     {% else %}
       {% assign item_type = "prose" %}
     {% endif %}
-    <div class="seas-item" data-tags="{{ item_tags }}"{% if forloop.last %} id="latest"{% endif %}>
+    <div class="seas-item" data-tags="{{ item_tags }}" data-date="{{ item.date | date: '%Y-%m-%d' }}" data-order="{{ item.order | default: 0 }}">
       <span class="seas-type">{{ item_type }}</span>
       <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
       <p class="seas-date">{{ item.date | date: "%B %-d, %Y" }}</p>
@@ -73,33 +76,82 @@ page_class: seas-page
   const btns = document.querySelectorAll('.filter-btn');
   const items = document.querySelectorAll('.seas-item');
   const empty = document.getElementById('seas-empty');
+  const tagToggle = document.getElementById('tag-toggle');
+  const tagFilters = document.getElementById('tag-filters');
 
-  document.getElementById('recent-btn').addEventListener('click', function() {
+  function updateTagToggle() {
+    if (!tagToggle) return;
+    const activeCount = tagFilters.querySelectorAll('.filter-btn.active').length;
+    const isOpen = tagFilters.style.display !== 'none';
+    if (activeCount > 0 && !isOpen) {
+      tagToggle.textContent = 'tags (' + activeCount + ') ▾';
+    } else {
+      tagToggle.textContent = isOpen ? 'tags ▴' : 'tags ▾';
+    }
+  }
+
+  if (tagToggle) {
+    tagToggle.addEventListener('click', function () {
+      const isOpen = tagFilters.style.display !== 'none';
+      tagFilters.style.display = isOpen ? 'none' : '';
+      updateTagToggle();
+    });
+  }
+
+  document.getElementById('recent-btn').addEventListener('click', function () {
     btns.forEach(b => b.classList.remove('active'));
     this.classList.add('active');
-    const allItems = Array.from(items);
-    const lastVisible = allItems[allItems.length - 1];
-    items.forEach(item => item.style.display = item === lastVisible ? '' : 'none');
+    updateTagToggle();
+
+    let mostRecent = null;
+    items.forEach(function (item) {
+      if (!mostRecent) { mostRecent = item; return; }
+      const d1 = item.dataset.date, d0 = mostRecent.dataset.date;
+      if (d1 > d0 || (d1 === d0 && parseInt(item.dataset.order) > parseInt(mostRecent.dataset.order))) {
+        mostRecent = item;
+      }
+    });
+
+    items.forEach(item => item.style.display = item === mostRecent ? '' : 'none');
     empty.style.display = 'none';
   });
 
   btns.forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
       if (!this.dataset.tag) return;
-      btns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
 
-      const tag = this.dataset.tag;
-      let visible = 0;
+      if (this.dataset.tag === 'all') {
+        btns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        items.forEach(item => item.style.display = '');
+        empty.style.display = 'none';
+        updateTagToggle();
+        return;
+      }
 
-      items.forEach(item => {
-        const tags = item.dataset.tags.split(' ');
-        const show = tag === 'all' || tags.includes(tag);
-        item.style.display = show ? '' : 'none';
-        if (show) visible++;
-      });
+      // Multi-select: toggle this tag, deactivate all/recent
+      document.querySelector('[data-tag="all"]').classList.remove('active');
+      document.getElementById('recent-btn').classList.remove('active');
+      this.classList.toggle('active');
 
-      empty.style.display = visible === 0 ? '' : 'none';
+      const activeTags = [...document.querySelectorAll('#tag-filters .filter-btn.active')].map(b => b.dataset.tag);
+
+      if (activeTags.length === 0) {
+        document.querySelector('[data-tag="all"]').classList.add('active');
+        items.forEach(item => item.style.display = '');
+        empty.style.display = 'none';
+      } else {
+        let visible = 0;
+        items.forEach(item => {
+          const tags = item.dataset.tags.split(' ');
+          const show = activeTags.some(tag => tags.includes(tag));
+          item.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        empty.style.display = visible === 0 ? '' : 'none';
+      }
+
+      updateTagToggle();
     });
   });
 </script>

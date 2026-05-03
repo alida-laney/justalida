@@ -3,7 +3,7 @@ title: "Certainty"
 layout: poem
 date: 2023-03-22
 published: 2025-12-31
-tags: [independence, trust, self-confidence, newness]
+tags: [independence, trust, confidence, newness]
 excerpt: "I am certain I like mine better"
 ---
 

@@ -12,7 +12,7 @@ title: Welcome
 
 <h1>Alida</h1>
 
-<p class="subtitle">Cartographer of the Emotional and Subconscious</p>
+<p class="subtitle">Cartographer of Emotional Linguistics</p>
 
 <p class="accent-dots-divider">
   <span class="accent-target purple"></span>
@@ -32,13 +32,13 @@ title: Welcome
     <p>The cover, distinct but unspecified,</p>
     <p>Tugs at the curiosity of your gut.</p>
     <p>~</p>
-    <p>But how can you be so sure</p>
-    <p>-So certain-</p>
+    <p>But how can you be so sure,</p>
+    <p>So certain,</p>
     <p>~</p>
-    <p>There is something good,</p>
-    <p>Begging to be found,</p>
+    <p>There is something good here,</p>
+    <p>Waiting to be found</p>
     <p>~</p>
-    <p>Here?</p>
+    <p>?</p>
   </div>
 
   <p class="accent-dots-divider">
@@ -53,7 +53,7 @@ title: Welcome
     <p>Allow my collections to serve as lighthouses.</p>
     <p>~</p>
     <p>And, please, knock on my door if you feel called.</p>
-    <p>You do need to travel alone.</p>
+    <p>You do not need to travel alone.</p>
   </div>
 
   <p>
@@ -79,7 +79,7 @@ title: Welcome
 
   <a href="/roads/" class="card-link">
     <div class="content-section centered">
-      <p><span class="accent-target purple"></span>Roads<span class="accent-target purple"></span></p>
+      <p><span class="accent-compass pink"></span>Roads<span class="accent-compass pink"></span></p>
       <p><em>Routes that connect us ~ Explore visions and offerings</em></p>
     </div>
   </a>

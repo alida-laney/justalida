@@ -19,7 +19,7 @@ My soul removes itself from my body
 As I try to lean into the happiness.  
 
 It is so unfamiliar to me, and  
-I am so accustomed to it’s scarcity,  
+I am so accustomed to its scarcity,  
 Abundance feels  
 Like a trap.  
 

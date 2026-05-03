@@ -2,7 +2,7 @@
 title: "My Professional History, Narratively"
 date: 2025-09-22
 description: "Biology to data science to engineering, in story format."
-tags: [storytelling, about-me, history]
+tags: [storytelling, history]
 layout: post
 ---
 
@@ -103,7 +103,7 @@ Because it is a competitive grant program, I could not put all my eggs in that b
 
 The intent of the internship was to work on computational research projects, which I did early on, but, shortly after joining the team, COVID hit. Things shifted significantly.
 
-The bulk of my work here ended up relying more on my teaching and writing skills than my programming skills. It was valuable in a way I often forget to reflect on because of the weight of the context of the time. I truly enjoyed working with my team here, especially my mentor, Nick Saba.
+The bulk of my work here ended up relying more on my teaching and writing skills than my programming skills. It was valuable in a way I often forget to reflect on because of the weight of the context of the time. I truly enjoyed working with my team here, especially my mentor.
 
 > **Intern**  
 > *ARSIEM Corporation*  
@@ -241,7 +241,7 @@ The square wheels turned. I interviewed with an authentically annoyed sense of a
 
 Local government is something you have to experience to understand.
 
-I wear so many hats - and shoes and dresses and jackets - it's insane.
+I wear so many hats - and shoes and dresses and jackets.
 
 Sometimes we're cloud systems admins, sometimes we're project managers, and sometimes we're policy-drafters.
 
@@ -249,11 +249,11 @@ This is another topic that deserves its own post. Working for the City of Pittsb
 
 ## What's Next?
 
-My passion for my job and my team is unmatched.
+I feel so much gratitude for my city and my team.
 
-If something manages to pull me away from this, it must be the most fulfilling, exciting, novel, interdisciplinary role yet.
+Whatever pulls me away from this, will certainly be the most fulfilling, exciting, novel, interdisciplinary role yet.
 
-We shall see!
+We shall see.
 
 ## Thank You!
 

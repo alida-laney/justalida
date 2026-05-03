@@ -2,7 +2,7 @@
 title: "Evidence"
 layout: poem
 date: 2026-02-04
-tags: [trust, self-conficence, certainty]
+tags: [trust, confidence, certainty]
 excerpt: "Just this morning, a sign came."
 ---
 

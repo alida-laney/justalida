@@ -39,7 +39,7 @@ layout: landing
   const seasOrder = [{% for item in seas_items %}{"url":"{{ item.url | relative_url }}","title":{{ item.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
   const fieldsOrder = {
-    {% for field in site.fields %}"{{ field.slug }}": [{% for work in field.works %}{% if work.collection == 'poems' %}{% assign item = site.poems | where: "slug", work.slug | first %}{% elsif work.collection == 'posts' %}{% assign item = site.prose | where: "slug", work.slug | first %}{% else %}{% assign item = nil %}{% endif %}{% if item %}{"url":"{{ item.url | relative_url }}","title":{{ item.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}]{% unless forloop.last %},{% endunless %}{% endfor %}
+    {% for field in site.fields %}"{{ field.slug }}": [{% for work in field.works %}{% if work.collection == 'poems' %}{% assign item = site.poems | where: "slug", work.slug | first %}{% elsif work.collection == 'prose' %}{% assign item = site.prose | where: "slug", work.slug | first %}{% else %}{% assign item = nil %}{% endif %}{% if item %}{"url":"{{ item.url | relative_url }}","title":{{ item.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}]{% unless forloop.last %},{% endunless %}{% endfor %}
   };
 
   const currentUrl = window.location.pathname;

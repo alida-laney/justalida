@@ -34,7 +34,7 @@ title: Contact
         <option value="Intuitive Creation">Intuitive Creation Request</option>
         <option value="Consultation">Consultation Request</option>
         <option value="Collaboration">Collaboration Request</option>
-        <option value="Comments and Feedback">Comments & Feedback</option>
+        <option value="Thoughts and Feedback">Thoughts & Feedback</option>
       </select>
     </div>
 
@@ -59,11 +59,11 @@ title: Contact
 
 
   const descriptions = {
-    "Tarot/Oracle": "Expect a photo of cards pulled & a written description of the energy felt - emailed within 72 hours of payment ($20, sent <a href='https://venmo.com/justalida'>here</a>). Include a question, a vibe, or a dream in the message box below.",
-    "Intuitive Creation": "Expect a poem, a painting, or, perhaps, both - shipped within 14 days of payment ($50, sent <a href='https://venmo.com/justalida'>here</a>). Include a question, a vibe, or a dream in the message box below, as well as an address for shipping.",
-    "Consultation": "Make sure you have read the expectations (TODO: ADD LINK) and feel aligned with the rigor of the work. Include a paragraph on why you are interested in this relationship, as well as days and times in the next 14 days where you would be available for a 15-20 minute phone consultation. I will reply within 72 hours to confirm or propose an appointment and will request a phone number at that time.",
+    "Tarot/Oracle": "Expect a photo of cards pulled & a written description of the energy felt - emailed within 72 hours of payment ($20, sent via <a href='https://venmo.com/justalida'>Venmo</a>). Include a question, a vibe, or a dream in the message box below.",
+    "Intuitive Creation": "Expect a poem, a painting, or, perhaps, both - shipped within 14 days of payment ($50, sent via <a href='https://venmo.com/justalida'>Venmo</a>). Include a question, a vibe, or a dream in the message box below, as well as an address for shipping.",
+    "Consultation": "Make sure you have read <a href='/prose/life-transition-consultation/'>the description</a> and feel aligned with the purpose of the work. Include a paragraph on why you are interested in this relationship, as well as days and times in the next 14 days where you would be available for a ~20 minute phone consultation. I will reply via email within 72 hours to confirm or propose an appointment and will request a phone number at that time.",
     "Collaboration": "Please describe the nature of the project or interest, including why you are reaching out to me specifically.",
-    "Comments and Feedback": "Your time, energy, and thoughts are appreciated. I will respond reciprocally, as I have time."
+    "Thoughts and Feedback": "Your time, energy, and language are appreciated. I will respond reciprocally, as I have time."
   }
 
   document.getElementById('description').innerHTML = descriptions[type] || '';

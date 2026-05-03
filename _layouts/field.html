@@ -32,7 +32,7 @@ layout: landing
 
     {% if item %}
     <div class="seas-item">
-      <span class="seas-type">{{ work.collection | remove: 's' }}</span>
+      {% if work.collection == 'poems' %}{% assign work_type = 'poem' %}{% elsif work.collection == 'prose' %}{% assign work_type = 'prose' %}{% else %}{% assign work_type = work.collection %}{% endif %}<span class="seas-type">{{ work_type }}</span>
       <h3><a href="{{ item.url | relative_url }}?context={{ page.slug }}">{{ item.title }}</a></h3>
       <p class="seas-date">{{ item.date | date: "%B %-d, %Y" }}</p>
       {% assign display_excerpt = item.description | default: item.excerpt %}
