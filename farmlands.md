@@ -3,9 +3,11 @@ layout: landing
 title: Farmlands
 ---
 
+<style>:root { --accent: var(--soft-green); }</style>
+
 <h1>Farmlands</h1>
 
-<p class="subtitle">Fenced in regions of work.</p>
+<p class="subtitle">Fenced in fields of work.</p>
 
 <p>
   <span class="accent-square green"></span>

@@ -15,6 +15,8 @@
   --cream: #f8f5f0;
   --charcoal: #4a4a4a;
   --light-gray: #e8e3db;
+  /* Section accent — overridden per-page */
+  --accent: var(--soft-purple);
 }
 
 body {
@@ -45,7 +47,7 @@ body {
 }
 
 .main-nav a:hover {
-  color: var(--soft-blue);
+  color: var(--soft-purple);
 }
 
 .nav-dropdown {
@@ -70,8 +72,12 @@ body {
 }
 
 .nav-dropdown-trigger:hover {
-  color: var(--soft-blue);
+  color: var(--soft-purple);
 }
+
+.nav-sub .nav-seas:hover    { color: var(--soft-blue); }
+.nav-sub .nav-farmlands:hover { color: var(--soft-green); }
+.nav-sub .nav-roads:hover   { color: var(--soft-pink); }
 
 .nav-sub {
   display: none;
@@ -155,14 +161,14 @@ body {
 }
 
 .landing-page a {
-  color: var(--soft-blue);
+  color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s;
 }
 
 .landing-page a:hover {
-  border-bottom-color: var(--soft-blue);
+  border-bottom-color: var(--accent);
 }
 
 /* Accent elements inspired by geometric shapes in artwork */
@@ -258,8 +264,8 @@ body {
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: var(--soft-blue);
-  border-color: var(--soft-blue);
+  background: var(--accent);
+  border-color: var(--accent);
   color: white;
 }
 
@@ -282,6 +288,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: left;
+  transition: box-shadow 0.2s;
 }
 
 .seas-type {
@@ -296,18 +303,20 @@ body {
   font-weight: 300;
   letter-spacing: 0.05em;
   margin: 0.25rem 0 0.4rem;
+  transition: color 0.1s;
 }
 
-.seas-item h3 a {
-  color: var(--charcoal);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s, color 0.2s;
+a.card-link.seas-item:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.09);
 }
 
-.seas-item h3 a:hover {
-  color: var(--soft-blue);
-  border-bottom-color: var(--soft-blue);
+@media (hover: hover) {
+  a.card-link.seas-item:hover h3 {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+  }
 }
 
 .seas-date {
@@ -337,6 +346,41 @@ body {
   letter-spacing: 0.05em;
   margin-bottom: 0.4rem;
   text-align: center;
+  transition: color 0.1s;
+}
+
+@media (hover: hover) {
+  a.card-link:hover .field-title {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+  }
+}
+
+.section-name {
+  transition: color 0.1s;
+}
+
+@media (hover: hover) {
+  .card-seas:hover .section-name {
+    color: var(--soft-blue);
+    text-decoration: underline;
+    text-decoration-color: var(--soft-blue);
+    text-underline-offset: 3px;
+  }
+  .card-farmlands:hover .section-name {
+    color: var(--soft-green);
+    text-decoration: underline;
+    text-decoration-color: var(--soft-green);
+    text-underline-offset: 3px;
+  }
+  .card-roads:hover .section-name {
+    color: var(--soft-pink);
+    text-decoration: underline;
+    text-decoration-color: var(--soft-pink);
+    text-underline-offset: 3px;
+  }
 }
 
 .field-count {
@@ -371,8 +415,8 @@ body {
 }
 
 .work-nav-link:hover {
-  color: var(--soft-blue);
-  border-bottom-color: var(--soft-blue);
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .work-nav-next {
@@ -382,7 +426,7 @@ body {
 
 .back-link {
   font-size: 0.9rem;
-  color: var(--soft-blue);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -429,8 +473,8 @@ body {
 }
 
 .work-item h3 a:hover {
-  color: var(--soft-blue);
-  border-bottom-color: var(--soft-blue);
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .work-item.art img {
@@ -506,7 +550,7 @@ body {
   margin: 0 0.5rem;
 }
 
-/* Contact form */
+/* Connecg form */
 a.card-link {
   display: block;
   color: inherit;
@@ -572,13 +616,13 @@ a.card-link:hover .content-section {
   margin-bottom: 0;
 }
 
-.landing-page .contact-section {
+.landing-page .connect-section {
   width: 400px;
   max-width: 600px;
   margin: 3rem auto;
 }
 
-.contact-form {
+.connect-form {
   text-align: left;
   max-width: 100%;
 }
@@ -625,7 +669,7 @@ a.card-link:hover .content-section {
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: var(--soft-blue);
+  border-color: var(--accent);
   background-color: white;
 }
 
@@ -641,8 +685,8 @@ a.card-link:hover .content-section {
   box-sizing: content-box;
 }
 
-.contact-form button {
-  background-color: var(--soft-blue);
+.connect-form button {
+  background-color: var(--accent);
   color: white;
   border: none;
   padding: 0.75rem 2rem;
@@ -654,8 +698,8 @@ a.card-link:hover .content-section {
   width: 100%;
 }
 
-.contact-form button:hover {
-  background-color: #6fb0c1;
+.connect-form button:hover {
+  filter: brightness(0.88);
 }
 
 details summary {

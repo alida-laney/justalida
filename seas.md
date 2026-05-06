@@ -4,6 +4,8 @@ title: Open Seas
 page_class: seas-page
 ---
 
+<style>:root { --accent: var(--soft-blue); }</style>
+
 <h1>Open Seas</h1>
 
 <p class="subtitle">All the work, chronologically.</p>
@@ -49,9 +51,9 @@ page_class: seas-page
     {% else %}
       {% assign item_type = "prose" %}
     {% endif %}
-    <div class="seas-item" data-tags="{{ item_tags }}" data-date="{{ item.date | date: '%Y-%m-%d' }}" data-order="{{ item.order | default: 0 }}">
+    <a href="{{ item.url | relative_url }}?context=seas" class="card-link seas-item" data-tags="{{ item_tags }}" data-date="{{ item.date | date: '%Y-%m-%d' }}" data-order="{{ item.order | default: 0 }}">
       <span class="seas-type">{{ item_type }}</span>
-      <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+      <h3>{{ item.title }}</h3>
       <p class="seas-date">{{ item.date | date: "%B %-d, %Y" }}</p>
       {% assign display_excerpt = item.description | default: item.excerpt %}
       {% if display_excerpt and display_excerpt != "" %}
@@ -60,7 +62,7 @@ page_class: seas-page
       {% if item.tags.size > 0 %}
       <p class="seas-tags">{% for tag in item.tags %}<span class="seas-tag">{{ tag }}</span>{% endfor %}</p>
       {% endif %}
-    </div>
+    </a>
   {% endfor %}
 </div>
 

@@ -1,9 +1,9 @@
 ---
 layout: landing
-title: Contact
+title: Connect
 ---
 
-<h1>Reach Out</h1>
+<h1>Connect</h1>
 
 <p class="subtitle">Trust your pull.</p>
 
@@ -14,8 +14,8 @@ title: Contact
   <span class="accent-square purple"></span>
 </p>
 
-<div class="content-section contact-section">
-  <form action="https://formspree.io/f/mnjnawrn" method="POST" class="contact-form">
+<div class="content-section connect-section">
+  <form action="https://formspree.io/f/mnjnawrn" method="POST" class="connect-form">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
@@ -46,7 +46,7 @@ title: Contact
       <textarea id="message" name="message" rows="6" required></textarea>
     </div>
 
-    <button type="submit">Send Message</button>
+    <button type="submit">Reach Out</button>
   </form>
 </div>
 

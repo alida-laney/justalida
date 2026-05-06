@@ -2,13 +2,15 @@
 title: "Changing Voices"
 layout: field
 description: "Reorienting the relationship with voices in my head."
-order: 1
+order: 2
 symbol: asterisk
 color: pink
 works:
   - slug: on-changing-voices
     collection: prose
   - slug: thank-you
+    collection: poems
+  - slug: alone
     collection: poems
   - slug: sitting
     collection: poems

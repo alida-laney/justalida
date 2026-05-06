@@ -1,5 +1,5 @@
 ---
-title: "Life Transition Doula"
+title: "Help Across the Fog"
 date: 2026-05-03
 description: "Sharing my skills relationally"
 tags: [offerings, call, support, service, opportunity]
