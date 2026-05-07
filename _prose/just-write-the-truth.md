@@ -1,7 +1,7 @@
 ---
 title: "Just Write The Truth"
 date: 2026-04-03
-description: "Sharing my skills relationally"
+description: "I was fighting for my sanity in the margins of my notes app."
 tags: [offerings, call, support, service, opportunity]
 layout: post
 ---

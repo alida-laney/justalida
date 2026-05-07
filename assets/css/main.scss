@@ -203,7 +203,7 @@ body {
 .accent-square::before { content: "■"; }
 
 .accent-asterisk { font-size: 0.9rem; }
-.accent-asterisk::before { content: "✳"; }
+.accent-asterisk::before { content: "✳\FE0E"; }
 
 .accent-star { font-size: 0.7rem; }
 .accent-star::before { content: "★"; }
@@ -618,7 +618,7 @@ a.card-link:hover .content-section {
 
 .landing-page .connect-section {
   width: 400px;
-  max-width: 600px;
+  max-width: 100%;
   margin: 3rem auto;
 }
 
