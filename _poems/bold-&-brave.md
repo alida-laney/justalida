@@ -2,6 +2,7 @@
 title: "Bold & Brave"
 layout: poem
 date: 2025-11-12
+published: 2025-12-31
 tags: [presence, frustration]
 excerpt: "I am boldly and bravely frustrated"
 ---

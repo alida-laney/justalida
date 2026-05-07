@@ -7,7 +7,7 @@ layout: default
 
   <p class="tag-description">{{ page.description | default: "All content tagged with this theme." }}</p>
 
-  {%- assign tagged_posts = site.posts | where: "tags", page.tag -%}
+  {%- assign tagged_posts = site.prose | where: "tags", page.tag -%}
   {%- assign tagged_content = site.content | where: "tags", page.tag -%}
 
   {%- assign all_tagged = tagged_posts | concat: tagged_content | sort: 'date' | reverse -%}

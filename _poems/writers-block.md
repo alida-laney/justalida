@@ -2,6 +2,7 @@
 title: "Writer’s Block"
 layout: poem
 date: 2023-03-02
+published: 2025-12-31
 tags: [language, color, memory, healing, processing]
 excerpt: "Writer's block feels different now than it used to."
 ---

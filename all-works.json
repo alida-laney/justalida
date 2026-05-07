@@ -1,0 +1,50 @@
+---
+layout: null
+permalink: /all-works.json
+---
+{%- assign all_poems = site.poems | sort: "date" -%}
+{%- assign all_prose = site.prose | sort: "date" -%}
+{%- assign all_works = all_poems | concat: all_prose | sort: "date" -%}
+{%- assign sorted_fields = site.fields | sort: "order" -%}
+{
+  "generated": "{{ site.time | date_to_xmlschema }}",
+  "works": [
+    {%- for work in all_works %}
+    {%- assign work_fields = "" | split: "" -%}
+    {%- for field in sorted_fields -%}
+      {%- assign field_slug = field.path | split: '/' | last | remove: '.md' -%}
+      {%- assign match = field.works | where: "slug", work.slug -%}
+      {%- if match.size > 0 -%}
+        {%- assign work_fields = work_fields | push: field_slug -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {
+      "slug": {{ work.slug | jsonify }},
+      "title": {{ work.title | jsonify }},
+      "collection": {{ work.collection | jsonify }},
+      "hidden": {{ work.hidden | default: false | jsonify }},
+      "date": "{{ work.date | date: '%Y-%m-%d' }}",
+      "tags": {{ work.tags | jsonify }},
+      "fields": {{ work_fields | jsonify }},
+      "url": "{{ site.url }}{{ work.url }}",
+      {%- if work.collection == "poems" %}
+      "excerpt": {{ work.excerpt | strip_html | strip | jsonify }},
+      {%- else %}
+      "excerpt": {{ work.description | default: "" | jsonify }},
+      {%- endif %}
+      "content": {{ work.content | strip_html | strip | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  "fields": [
+    {%- for field in sorted_fields %}
+    {%- assign field_slug = field.path | split: '/' | last | remove: '.md' -%}
+    {
+      "slug": {{ field_slug | jsonify }},
+      "title": {{ field.title | jsonify }},
+      "description": {{ field.description | jsonify }},
+      "works": {{ field.works | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}

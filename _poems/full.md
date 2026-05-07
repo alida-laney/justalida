@@ -2,6 +2,7 @@
 title: "Full"
 layout: poem
 date: 2025-07-03
+published: 2025-12-31
 tags: [journey, reflection, presence]
 excerpt: "I have made it..."
 ---

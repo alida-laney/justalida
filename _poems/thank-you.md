@@ -2,7 +2,8 @@
 title: "Thank You"
 layout: poem
 date: 2023-03-09
-tags: [voices, dissociation, bravery, persistence, voices]
+published: 2025-12-31
+tags: [voices, dissociation, bravery, persistence]
 excerpt: "Thank you to the voices..."
 ---
 

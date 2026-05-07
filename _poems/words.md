@@ -2,6 +2,7 @@
 title: "Words"
 layout: poem
 date: 2023-03-01
+published: 2025-12-31
 tags: [language, meaning, change, healing, processing]
 excerpt: "Words were my refuge."
 ---

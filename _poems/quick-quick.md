@@ -2,6 +2,7 @@
 title: "quick, quick"
 layout: poem
 date: 2025-05-09
+published: 2025-12-31
 tags: [presence, dissociation, trust, addiction]
 excerpt: "You Can Do It."
 ---

@@ -2,6 +2,7 @@
 title: "phone"
 layout: poem
 date: 2024-04-05
+published: 2025-12-31
 tags: [addiction, cycles, technology, hostility]
 excerpt: "i pick up my phone again..."
 ---

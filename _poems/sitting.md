@@ -2,6 +2,7 @@
 title: "Sitting"
 layout: poem
 date: 2024-04-11
+published: 2025-12-31
 tags: [rest, cycles, voices]
 excerpt: "I've been doing a lot of sitting around and waiting lately."
 ---

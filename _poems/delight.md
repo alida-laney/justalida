@@ -2,6 +2,7 @@
 title: "Delight"
 layout: poem
 date: 2025-06-12
+published: 2025-12-31
 tags: [presence, abundance, faith, trust]
 excerpt: "I am greatly pleased today."
 ---

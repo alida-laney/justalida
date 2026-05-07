@@ -2,6 +2,7 @@
 title: "Alone"
 layout: poem
 date: 2023-06-28
+published: 2025-12-31
 tags: [frustration, voices, self-care, anger, depression]
 excerpt: "I won't do anything about it."
 ---

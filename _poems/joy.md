@@ -2,6 +2,7 @@
 title: "Joy"
 layout: poem
 date: 2025-08-03
+published: 2025-12-31
 tags: [presence, gratitude, growth]
 excerpt: "Raw. Unfiltered."
 ---

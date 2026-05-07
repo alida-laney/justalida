@@ -2,6 +2,7 @@
 title: "Before My Alarm"
 layout: poem
 date: 2025-09-04
+published: 2025-12-31
 tags: [love, presence, gratitude]
 excerpt: "I am lucky"
 ---

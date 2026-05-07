@@ -2,6 +2,7 @@
 title: "Patience"
 layout: poem
 date: 2025-04-28
+published: 2025-12-31
 tags: [uncertainty, patience, faith]
 excerpt: "EXPECT DELAYS."
 ---

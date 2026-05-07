@@ -2,6 +2,7 @@
 title: "Pulling"
 layout: poem
 date: 2025-12-06
+published: 2025-12-31
 tags: [presence, body, processing, hope]
 excerpt: "I am learning a lot"
 ---

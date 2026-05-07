@@ -2,6 +2,7 @@
 title: "Strong People"
 layout: poem
 date: 2025-12-02
+published: 2025-12-31
 tags: [presence, body, processing, hope]
 excerpt: "It's ugly, it's slow..."
 ---

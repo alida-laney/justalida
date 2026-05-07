@@ -2,6 +2,7 @@
 title: "How On Earth"
 layout: poem
 date: 2025-08-23
+published: 2025-12-31
 tags: [love, gratitude, friendship]
 excerpt: "ILYSM"
 ---

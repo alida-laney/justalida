@@ -2,6 +2,7 @@
 title: "Feels Bad"
 layout: poem
 date: 2025-11-23
+published: 2025-12-31
 tags: [presence, depression, body]
 excerpt: "Something feels bad."
 ---

@@ -2,6 +2,7 @@
 title: "Twenty Twenty Four"
 layout: poem
 date: 2024-12-31
+published: 2025-12-31
 tags: [presence, acceptance, gratitude, reflection, hope]
 excerpt: "my reflections on the year"
 ---

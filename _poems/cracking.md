@@ -2,6 +2,7 @@
 title: "Cracking"
 layout: poem
 date: 2025-10-28
+published: 2025-12-31
 tags: [growth, noticing]
 excerpt: "Progress."
 ---

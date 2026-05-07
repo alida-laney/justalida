@@ -2,6 +2,7 @@
 title: "party"
 layout: poem
 date: 2024-12-14
+published: 2025-12-31
 tags: [presence, noticing, acceptance]
 excerpt: "Anti-social?"
 ---

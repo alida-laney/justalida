@@ -2,6 +2,7 @@
 title: "burning"
 layout: poem
 date: 2024-10-04
+published: 2025-12-31
 tags: [patience, feeling, frustration]
 excerpt: "there is a white hot searing pain in my chest."
 ---

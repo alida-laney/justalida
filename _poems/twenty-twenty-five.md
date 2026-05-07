@@ -2,6 +2,7 @@
 title: "Twenty Twenty Five"
 layout: poem
 date: 2025-12-31
+published: 2025-12-31
 tags: [reflection, accomplishment]
 excerpt: "The message I've sent myself is clear"
 ---

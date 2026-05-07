@@ -2,6 +2,7 @@
 title: "death through the window"
 layout: poem
 date: 2025-06-27
+published: 2025-12-31
 tags: [uncertainty, noticing, presence]
 excerpt: "Death stays still."
 ---

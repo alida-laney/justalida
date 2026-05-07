@@ -2,6 +2,7 @@
 title: "Reclamation"
 layout: poem
 date: 2025-11-11
+published: 2025-12-31
 tags: [cycles, noticing, change]
 excerpt: "I can do it."
 ---

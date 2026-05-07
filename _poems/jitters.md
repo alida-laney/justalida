@@ -2,6 +2,7 @@
 title: "Jitters"
 layout: poem
 date: 2025-11-25
+published: 2025-12-31
 tags: [presence, body, processing]
 excerpt: "I'm writing this poem..."
 ---

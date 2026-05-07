@@ -2,6 +2,7 @@
 title: "endurance"
 layout: poem
 date: 2024-09-07
+published: 2025-12-31
 tags: [persistence, optimism, abundance]
 excerpt: "it worked."
 ---

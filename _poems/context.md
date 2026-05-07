@@ -2,6 +2,7 @@
 title: "Context"
 layout: poem
 date: 2025-04-07
+published: 2025-12-31
 tags: [frustration, bitterness]
 excerpt: "you don't have to tell me."
 ---
