@@ -149,6 +149,7 @@ body {
   background: white;
   border-radius: 3px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-sizing: border-box;
 }
 
 .landing-page .content-section p {
@@ -642,7 +643,7 @@ a.card-link:hover .content-section {
 .form-group input,
 .form-group textarea,
 .form-group select {
-  width: 95%;
+  width: 100%;
   padding: 0.75rem;
   border: 1px solid var(--light-gray);
   border-radius: 3px;
@@ -653,7 +654,7 @@ a.card-link:hover .content-section {
   transition: border-color 0.2s, background-color 0.2s;
   appearance: none;
   -webkit-appearance: none;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 .form-group select {
@@ -661,7 +662,7 @@ a.card-link:hover .content-section {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   padding-right: 2.25rem;
-  width: calc(95% - 1.5rem);
+  width: 100%;
   cursor: pointer;
 }
 
@@ -681,8 +682,8 @@ a.card-link:hover .content-section {
   font-size: 0.875rem;
   font-style: italic;
   color: var(--charcoal);
-  width: 95%;
-  box-sizing: content-box;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .connect-form button {
