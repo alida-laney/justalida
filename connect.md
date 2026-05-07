@@ -30,10 +30,10 @@ title: Connect
       <label for="name">Request Type</label>
       <select id="request-type" name="request_type" required>
         <option value="">Select a request type</option>
-        <option value="Tarot/Oracle">Tarot/Oracle Request</option>
-        <option value="Intuitive Creation">Intuitive Creation Request</option>
-        <option value="Consultation">Consultation Request</option>
         <option value="Collaboration">Collaboration Request</option>
+        <option value="Consultation">Consultation Request</option>
+        <option value="Intuitive Creation">Intuitive Creation Request</option>
+        <option value="Tarot/Oracle">Tarot/Oracle Request</option>
         <option value="Thoughts and Feedback">Thoughts & Feedback</option>
       </select>
     </div>
@@ -61,7 +61,7 @@ title: Connect
   const descriptions = {
     "Tarot/Oracle": "Expect a photo of cards pulled & a written description of the energy felt - emailed within 72 hours of payment ($20, sent via <a href='https://venmo.com/justalida'>Venmo</a>). Include a question, a vibe, or a dream in the message box below.",
     "Intuitive Creation": "Expect a poem, a painting, or, perhaps, both - shipped within 14 days of payment ($50, sent via <a href='https://venmo.com/justalida'>Venmo</a>). Include a question, a vibe, or a dream in the message box below, as well as an address for shipping.",
-    "Consultation": "Make sure you have read <a href='/prose/life-transition-consultation/'>the description</a> and feel aligned with the purpose of the work. Include a paragraph on why you are interested in this relationship, as well as days and times in the next 14 days where you would be available for a ~20 minute phone consultation. I will reply via email within 72 hours to confirm or propose an appointment and will request a phone number at that time.",
+    "Consultation": "Make sure you have read <a href='/prose/life-transition-consultation/'>the description</a> and feel aligned with the purpose & process of the work. Include a paragraph on why you are interested in this relationship, as well as days and times in the next 14 days where you would be available for a ~20 minute phone consultation. I will reply via email within 72 hours to confirm or propose an appointment and will request a phone number at that time.",
     "Collaboration": "Please describe the nature of the project or interest, including why you are reaching out to me specifically.",
     "Thoughts and Feedback": "Your time, energy, and language are appreciated. I will respond reciprocally, as I have time."
   }

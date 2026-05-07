@@ -2,7 +2,7 @@
 title: "Changing Voices"
 layout: field
 description: "Reorienting the relationship with voices in my head."
-order: 2
+order: 3
 symbol: asterisk
 color: pink
 works:

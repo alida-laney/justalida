@@ -2,7 +2,7 @@
 title: "Joy, Atop The Hill"
 layout: field
 description: "Developing joy, regardless of circumstance."
-order: 1
+order: 2
 symbol: star
 color: green
 works:

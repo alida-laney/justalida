@@ -18,7 +18,7 @@ title: Roads
 <div class="connect-section">
   <div class="content-section">
     <details>
-      <summary><div class="summary-text"><span class="summary-title">Play</span><span class="summary-sub">Light & Intuitive</span></div></summary>
+      <summary><div class="summary-text"><span class="summary-title">Play</span><span class="summary-sub">Light & Easy</span></div></summary>
       <div class="content-section">
         <div class="link-item">
           <p><a href="https://www.instagram.com/just.alida/">Instagram</a></p>

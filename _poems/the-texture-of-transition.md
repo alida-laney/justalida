@@ -3,7 +3,7 @@ title: "The Texture of Transition"
 layout: poem
 date: 2026-05-06
 tags: [transition, processing, cycles, voices, water]
-excerpt: ""
+excerpt: "Steady as ever, I am seasick"
 dedicaiton: "those who have been here, too."
 ---
 
@@ -17,13 +17,11 @@ dedicaiton: "those who have been here, too."
 
 ~
 
-As steady as I’ve ever been,  
+Steady as ever,  
 I am seasick in the waves of life.  
-
-Nothing can prepare me for the unknown,  
-And yet,  
-My gut is searching,  
-Frantically.  
+  
+My gut is searching frantically  
+Through the unknown.  
 
 ~
 

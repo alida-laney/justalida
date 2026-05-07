@@ -1,12 +1,12 @@
 ---
-title: "Embodied Trust"
+title: "Body; The Truth."
 layout: field
-description: "Leading through relationship with the body."
-order: 2
-symbol: asterisk
-color: pink
+description: "Gaining confidence in flesh as the source of experience."
+order: 1
+symbol: compass
+color: yellow
 works:
-  - slug: on-body-knows-best
+  - slug: on-body-the-truth
     collection: prose
   - slug: noticing
     collection: poems
