@@ -1,5 +1,5 @@
 ---
-title: "Support & Companionship Through The Fog"
+title: "You Can, Too."
 date: 2026-05-03
 description: "Sharing my skills relationally"
 tags: [offerings, call, support, service, opportunity]
