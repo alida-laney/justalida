@@ -36,4 +36,6 @@ works:
     collection: poems
   - slug: just-write-the-truth
     collection: prose
+  - slug: a-seal-on-litigation
+    collection: prose
 ---
