@@ -3,7 +3,7 @@ title: "exhaustion"
 layout: poem
 date: 2024-08-25
 published: 2025-12-31
-tags: [reflection, documenting, memory]
+tags: [reflection, documentation, memory]
 excerpt: "still, though, i feel compelled"
 ---
 
