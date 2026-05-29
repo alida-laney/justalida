@@ -78,6 +78,7 @@ body {
 .nav-sub .nav-seas:hover    { color: var(--soft-blue); }
 .nav-sub .nav-farmlands:hover { color: var(--soft-green); }
 .nav-sub .nav-roads:hover   { color: var(--soft-pink); }
+.nav-sub .nav-skies:hover   { color: var(--soft-yellow); }
 
 .nav-sub {
   display: none;
@@ -106,7 +107,7 @@ body {
 
 .landing-page {
   width: 100%;
-  max-width: 650px;
+  max-width: 620px;
   margin: 0 auto;
   padding: 2rem 4rem;
   text-align: center;
@@ -128,7 +129,7 @@ body {
 }
 
 .landing-page h1 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
   font-weight: 300;
   letter-spacing: 0.05em;
@@ -382,6 +383,12 @@ a.card-link.seas-item:hover {
     text-decoration-color: var(--soft-pink);
     text-underline-offset: 3px;
   }
+  .card-skies:hover .section-name {
+    color: var(--soft-yellow);
+    text-decoration: underline;
+    text-decoration-color: var(--soft-yellow);
+    text-underline-offset: 3px;
+  }
 }
 
 .field-count {
@@ -551,6 +558,12 @@ a.card-link.seas-item:hover {
   margin: 0 0.5rem;
 }
 
+.poem-symbol {
+  color: var(--accent);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
 /* Connecg form */
 a.card-link {
   display: block;
@@ -587,13 +600,11 @@ a.card-link:hover .content-section {
 }
 
 .connect-section {
-  width: 500px;
   max-width: 100%;
   margin: 1.5rem auto;
 }
 
 .index-section {
-  width: 500px;
   max-width: 100%;
   margin: 1.5rem auto;
 }
@@ -618,7 +629,6 @@ a.card-link:hover .content-section {
 }
 
 .landing-page .connect-section {
-  width: 400px;
   max-width: 100%;
   margin: 3rem auto;
 }

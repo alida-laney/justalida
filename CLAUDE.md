@@ -5,7 +5,7 @@
 **Domain**: justalida.com (GitHub Pages with custom domain)
 **Purpose**: Personal creative website — cartography as metaphor. Alida's poems, essays, and other work, plus professional offerings and connection.
 **Architecture**: Jekyll-based static site
-**Active branch**: `site-structure-revamp` (not yet merged to main)
+**Active branch**: no active branch right now
 
 ---
 
