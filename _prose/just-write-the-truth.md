@@ -10,9 +10,9 @@ I sobbed for my whole 30 minute walk into work yesterday morning.
 As I approached my building, I wondered what could possibly need to be said.
 I heard a voice.
 
-*Don’t get esoteric with it.*
-*You know what happened.*
-*Write the truth.*
+*Don’t get esoteric with it.*  
+*You know what happened.*  
+*Write the truth.*  
 
 The truth is…
 
@@ -206,15 +206,15 @@ These people saw me, heard me, felt the presence of my truth, and decided to pur
 
 But love is not control.
 
-Love is integrity.
+Love is integrity.  
 Love is aligned action.
 
-The only love in this story
+The only love in this story  
 Is from me to myself.
 
 That is the truth, as of this moment in time.
 
-Signed, dated, and sealed,
+Signed, dated, and sealed,  
 From the pink velvet couch, in my own home.
 
 Friday, April 3rd, 2026, 10:48 pm.

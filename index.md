@@ -65,7 +65,14 @@ title: Welcome
   <a href="/roads/" class="card-link card-roads">
     <div class="content-section centered">
       <p><span class="accent-compass pink"></span><span class="section-name">Roads</span><span class="accent-compass pink"></span></p>
-      <p><em>Routes that connect us ~ Explore visions and offerings</em></p>
+      <p><em>Routes that connect us ~ Explore avenues and offerings</em></p>
+    </div>
+  </a>
+
+  <a href="/skies/" class="card-link card-skies">
+    <div class="content-section centered">
+      <p><span class="accent-asterisk yellow"></span><span class="section-name">Skies</span><span class="accent-asterisk yellow"></span></p>
+      <p><em>Visions from above ~ Explore dreams and aspirations</em></p>
     </div>
   </a>
 

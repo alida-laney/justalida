@@ -23,7 +23,25 @@ layout: landing
 
 <nav class="work-nav" id="work-nav"></nav>
 
+<script src="{{ '/assets/js/bg-symbols.js' | relative_url }}"></script>
 <script>
+  const fieldsData = { {% for field in site.fields %}"{{ field.slug }}": { symbol: "{{ field.symbol }}", color: "{{ field.color }}" }{% unless forloop.last %},{% endunless %}{% endfor %} };
+
+  (function() {
+    const ctx = new URLSearchParams(window.location.search).get('context');
+    if (!ctx) return;
+
+    const map = { seas: 'var(--soft-blue)', roads: 'var(--soft-pink)' };
+    document.documentElement.style.setProperty('--accent', map[ctx] || 'var(--soft-green)');
+
+    if (ctx === 'seas') {
+      applySymbolBackground('≈', '#89c5d4');
+    } else {
+      const field = fieldsData[ctx];
+      if (field) applySymbolBackground(SYMBOL_CHARS[field.symbol], SYMBOL_COLORS[field.color]);
+    }
+  })();
+
   {% assign seas_items = site.poems | concat: site.prose | sort: 'date' %}
   const seasOrder = [{% for item in seas_items %}{"url":"{{ item.url | relative_url }}","title":{{ item.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}];
 
