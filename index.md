@@ -12,7 +12,7 @@ title: Welcome
 
 <h1>Alida</h1>
 
-<p class="subtitle">Cartographer | Woman | Justice & Integrity</p>
+<p class="subtitle">Cartographer | Woman of Truth</p>
 
 <p class="accent-dots-divider">
   <span class="accent-water blue"></span>
