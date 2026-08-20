@@ -5,6 +5,7 @@ date: 2026-06-01
 tags: [documentation, grief, healing, honesty, processing, vulnerability]
 excerpt: "Do you think I deserved all those tears…"
 dedication: "everyone who has taken way less than they deserve"
+hidden: true
 ---
 
 Daydreaming on my walk to work,  
