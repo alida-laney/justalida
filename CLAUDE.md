@@ -2,171 +2,99 @@
 
 ## Site Overview
 
-**Domain**: justalida.com (GitHub Pages with custom domain)
-**Purpose**: Personal creative website — cartography as metaphor. Alida's poems, essays, and other work, plus professional offerings and connection.
-**Architecture**: Jekyll-based static site
-**Active branch**: no active branch right now
+**Domain**: justalida.com (GitHub Pages, custom domain via CNAME)
+**Purpose**: Personal creative website — Alida's poems, essays, and offerings.
+**Architecture**: Jekyll static site. No frameworks, no build tools beyond Jekyll. Plain CSS + vanilla JS.
+
+**Current era — "An Autumn Stroll"** (launched Nov 2026): the homepage is a directed, cinematic sidescroll — a bundled figure on an evening walk through an autumn, Pittsburgh-flavored city. Scroll down → the world parallax-scrolls left, the sky falls from day → dusk → night, lights come on, leaves drift, and the city dissolves into a pastel drawing at the end.
+
+**Previous era — "The Atlas"** (cartography): fully preserved and browsable at `/atlas/`, reached gently through the `/wander/` doorway. Nothing was deleted.
 
 ---
 
-## Site Structure & Navigation
+## Site Structure
 
-Nav: **home** | **explore** (dropdown) | **contact**
-
-The explore dropdown links to:
-- **Open Seas** (`/seas/`) — all work chronologically, oldest → newest, with tag filtering
-- **Farmlands** (`/farmlands/`) — curated collections ("fields")
-- **Roads** (`/roads/`) — not yet built
-
-Static pages at root: `index.md`, `seas.md`, `farmlands.md`, `roads.md`, `contact.md`, `work.md` (legacy, shows a "things are different" notice)
-
----
-
-## Content Collections
-
-### Poems — `_poems/filename.md`
-```yaml
----
-title: "Title"
-layout: poem
-date: 2026-01-18        # date written
-published: 2025-12-31   # date added to site (omit if written & published same day)
-tags: [tag1, tag2]
-excerpt: "A short quote"
-dedication: "person"    # optional
-order: 3                # optional, for same-day ordering
----
-```
-- Poems dated before 2026-01-01 have `published: 2025-12-31` (site launch date)
-- Line breaks in poems use two trailing spaces (`  `)
-
-### Posts — `_posts/YYYY-MM-DD-title.md`
-Standard Jekyll posts. Can include `tags` for filtering on Seas.
-
-### Fields (Curated Collections) — `_fields/field-name.md`
-```yaml
----
-title: "Field Title"
-layout: field           # auto-applied via _config.yml default
-description: "One line description."
-order: 1                # sort order on Farmlands page
-symbol: star            # any legend symbol name (see below)
-color: pink             # any palette color name (see below)
-works:
-  - slug: poem-filename-without-extension
-    collection: poems
-  - slug: post-slug
-    collection: posts
----
-```
-- Works can appear in multiple fields
-- Slug matching uses `where_exp` on `p.path contains work.slug`
-- Field pages live at `/fields/field-name/`
-
----
-
-## Design System
-
-### Palette (CSS variables in `assets/css/main.scss`)
-| Variable | Hex | Use |
+### The new era (front door)
+| Path | File | Notes |
 |---|---|---|
-| `--cream` | `#f8f5f0` | Page background |
-| `--charcoal` | `#4a4a4a` | Body text |
-| `--light-gray` | `#e8e3db` | Borders, dividers |
-| `--soft-blue` | `#89c5d4` | Links, active states |
-| `--soft-purple` | `#c9aed6` | Accent |
-| `--soft-pink` | `#f4b8c4` | Accent |
-| `--soft-yellow` | `#f9e4a0` | Accent |
-| `--soft-orange` | `#f5c78e` | Accent |
-| `--soft-green` | `#a8c5a0` | Accent |
-| `--soft-brown` | `#c4a882` | Accent |
+| `/` | `index.html` | The walk. Self-contained page (own `<head>`, links walk.css/js). |
+| `/read/` | `read.md` | "Fallow Land" poem. Uses `era` layout. |
+| `/wander/` | `wander.md` | "Traveling back in time" doorway → links to `/atlas/`. `era` layout. |
+| `/connect/` | `connect.md` | Contact form (Formspree `mnjnawrn`, request types, Venmo). `era` layout. |
 
-Color class names (apply to any symbol): `.purple` `.pink` `.blue` `.yellow` `.orange` `.green` `.brown`
+The walk's only navigation is the arrival card's **read · wander · connect** links. Era pages link back via "← back to the walk" → `/#arrival`.
 
-### Legend Symbols
-Symbols and colors are independent — mix freely: `<span class="accent-triangle pink"></span>`
-
-| Class | Glyph | Name |
-|---|---|---|
-| `.accent-triangle` | ▲ | triangle |
-| `.accent-square` | ■ | square |
-| `.accent-star` | ★ | star |
-| `.accent-water` | ≈ | water |
-| `.accent-target` | ⊙ | target |
-| `.accent-compass` | ✦ | compass |
-| `.accent-asterisk` | ✳ | asterisk (reserved) |
-| `.accent-circle` | ● | circle (reserved) |
-
-All symbols share a subtle brown text-shadow outline via CSS.
-
-### Key CSS Classes
-- `.landing-page` — page wrapper, max-width 700px, centered
-- `.content-section` — white card with shadow (used everywhere)
-- `.index-section` — fixed 450px centered wrapper (index page)
-- `.connect-section` — fixed 500px centered wrapper (connect page)
-- `.seas-grid` — max-width 600px centered, used for work listings
-- `.intro-box` — pale blue (`#f4f9fb`) italic box for verse/quotes
-- `.card-link` — makes a whole `.content-section` clickable
-- `.filter-btn` — pill button for Seas tag filters
-- `.seas-item` — individual work card
-- `.work-nav` — prev/next navigation at bottom of poem pages
-- `.summary-text` / `.summary-title` / `.summary-sub` — details/summary styling (Connect page)
-- `.link-item` / `.link-desc` — link with description below (Connect page)
-
-### Background
-Faint topographic contour lines on `body` via SVG `background-image`.
+### The Atlas archive (preserved)
+- `/atlas/` — `atlas.md`, the old cartography home (was the previous `index.md`).
+- `/seas/`, `/farmlands/`, `/roads/`, `/skies/` — unchanged, still live.
+- `_layouts/landing.html` nav "meet" → `/atlas/` so the archive is self-contained. "connect" → the (new) `/connect/`.
 
 ---
 
-## Prev/Next Navigation (poem layout)
+## The Walk — how it works (`index.html` + `walk.scss` + `walk.js`)
 
-Works are navigable with `?context=` URL param:
-- No param or `?context=seas` → chronological order (all poems + posts by date)
-- `?context=field-slug` → order from that field's `works` list
+**Structure**: a `position: fixed` `.stage` (the scene) behind a scrolling `.track` of full-height `.station` sections (the content cards). `walk.js` maps scroll progress `p` (0→1) to CSS variables and layer transforms.
 
-Field pages automatically append `?context={{ page.slug }}` to work links. Context carries through prev/next clicks.
+**Scene layers** (back → front), each a parallax `.layer` with `data-speed`:
+`sky` (day/dusk/night cross-fade) · `texture` (pastel drawing, above sky, fades in only at the very end) · `stars` · hills · skyline · bridge (Three Sisters) · river · mid (Victorian building + trees) · **walker** (z between near & fg) · near (grass, lampposts, bench) · **fg** (foreground ginkgo + maple — figure passes *behind* these) · mist (pastel bands).
+
+- **Parallax**: each layer sized by *height* (`height:100%; width:auto`), scene width = intrinsic. `walk.js` sets `translateX = -p * (scrollWidth - innerWidth) * data-speed`.
+- **Leaves**: shed from per-tree `.emitter` points (ginkgo fans / maple palmate), positioned by `walk.js` from the SVG render geometry so they stay on their tree at any size.
+- **`#arrival`**: the back-link from era pages lands at the walk's end. `walk.js` captures the intent once, strips the hash (so reloads start at top), and jumps to the bottom.
+- **`history.scrollRestoration = "manual"`** so reloads start at the top.
+
+### ⚠️ iOS Safari/Chrome gotchas (hard-won — do not reintroduce)
+These caused smearing / voids / clipping on iOS and were deliberately removed:
+- **No `mix-blend-mode`** anywhere in the scene (forced full-scene re-blend each frame → smear).
+- **No `will-change: transform` or 3D transforms on `.layer`** (huge SVGs exceed iOS texture limits → vertical smear). Use plain 2D `translateX`.
+- **No `backdrop-filter`** on cards; keep heavy `filter: blur()` modest.
+- **`.stage` uses `height: 100lvh`** (largest viewport) so you can't scroll into a void below the fixed scene.
+- Overscroll bounce is left enabled (pull-to-refresh works); page bg is night-dark `#0a0f1c` so the bounce blends into the night arrival.
 
 ---
 
-## Layouts
+## Era pages (`_layouts/era.html` + `era.scss`)
 
-- `landing.html` — all pages (includes nav + contour background)
-- `poem.html` — extends landing, adds prev/next nav with JS-embedded order data
-- `field.html` — extends landing, renders works list from frontmatter
-- `post.html` — extends default (minima), for `_posts`
-- `tag_page.html` — individual theme tag pages
+Shared "rest-stop" style for read/wander/connect: a cream card on a dusk gradient **blended over the actual pastel drawing** (`assets/art/new-era/pastel-waves-web.jpg`, a ~328KB resized copy of `pastel-waves.jpg`). Faint stars. Warm terracotta accents. Form styles live here too.
 
 ---
 
-## Development
+## Content Collections (used by the Atlas archive + future work)
+
+- **Poems** — `_poems/filename.md` (layout `poem`). Line breaks use two trailing spaces. Pre-2026 poems have `published: 2025-12-31`.
+- **Prose** — `_prose/filename.md` (layout `post`).
+- **Fields** (curated collections) — `_fields/name.md` (layout `field`), referenced on Farmlands. Slug match via `where_exp` on `p.path contains work.slug`.
+- Poem/post prev-next uses `?context=` (seas = chronological, or a field slug).
+
+---
+
+## Design systems
+
+### New era (walk + era pages)
+Dusk→night sky; pastel drawing palette (gold, blue, pink, red, lavender, teal). Figure: coat `#19362a`, burgundy beanie `#732036`, brown boots. Era accent terracotta `#a0542c`. Palatino serif throughout.
+
+### Atlas era (archive) — defined in `assets/css/main.scss`
+Cream `#f8f5f0`, charcoal `#4a4a4a`, soft pastels; topographic contour background; legend symbols (`.accent-triangle/-square/-star/-water/-target/-compass` × color classes). Leave as-is to keep the archive intact.
+
+---
+
+## Development & Deployment
 
 ```bash
-# Start local dev server (must restart for _config.yml changes)
-./dev.sh
-# or
-bundle exec jekyll serve --drafts --livereload
-
-# Build
+./dev.sh                 # or: bundle exec jekyll serve --drafts --livereload
 bundle exec jekyll build
 ```
+`_config.yml` changes require a full server restart.
 
-**Important**: `_config.yml` changes require a full server restart — livereload does not pick them up.
-
----
-
-## Deployment
-
-- `main` branch auto-deploys to justalida.com via GitHub Actions
-- Custom domain via CNAME file
-- Workflow: `.github/workflows/jekyll.yml`
-- Current work is on `site-structure-revamp` branch, not yet in production
+- **`main` auto-deploys** to justalida.com via `.github/workflows/jekyll.yml`.
+- Inspiration images for this era live in `assets/art/new-era/` (full-size originals kept for reference; only `pastel-waves-web.jpg` is used on the site).
 
 ---
 
 ## Guiding Principles
 
-- **Cartography as brand** — maps, terrain, waypoints, water as recurring metaphors
-- **No jarring interactions** — smooth, stays-in-place, non-disruptive UX
-- **Chronology matters** — date written is sacred; `published` field distinguishes archive additions
-- **Mobile-friendly** — test on real devices for touch behavior
-- **Lightweight** — no JS frameworks, no build tools beyond Jekyll
+- **Collaborate as co-curator** — Alida directs by feel/mood and shares inspiration images; intuit and run with it, build in isolated trials, be honest about rough spots.
+- **Preservation matters** — never delete a past era; archive it browsably.
+- **No jarring interactions** — smooth, gentle transitions; announce big shifts (e.g. the `/wander/` time-travel doorway).
+- **Lightweight** — Jekyll, plain CSS/JS, no frameworks.
+- **Test on real mobile** — iOS rendering differs from desktop; verify on device.

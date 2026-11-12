@@ -1,6 +1,7 @@
 ---
 layout: landing
-title: Welcome
+title: The Atlas
+permalink: /atlas/
 ---
 
 <p class="accent-dots-divider">

@@ -6,6 +6,10 @@
 (function () {
   "use strict";
 
+  // start at the top on a normal load/reload (don't let the browser restore scroll);
+  // the #arrival back-link handles jumping to the end explicitly below
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
   var root   = document.documentElement;
   var track  = document.getElementById("track");
   var layers = Array.prototype.slice.call(document.querySelectorAll(".layer"));
@@ -152,6 +156,7 @@
     root.style.setProperty("--star-op",  smoothstep(0.62, 1, p).toFixed(3));
     root.style.setProperty("--light-op", smoothstep(0.42, 0.85, p).toFixed(3));
     root.style.setProperty("--mist-op",  (smoothstep(0.66, 1, p) * 0.82).toFixed(3));
+    root.style.setProperty("--texture-op", (smoothstep(0.86, 1, p) * 0.5).toFixed(3));
     root.style.setProperty("--city-fade", (1 - smoothstep(0.74, 1, p) * 0.4).toFixed(3));
 
     if (!reduce) {
@@ -177,4 +182,22 @@
     window.addEventListener("resize", function () { layoutEmitters(); measure(); render(); });
     render();
   }
+
+  /* arriving via "#arrival" (the back-link from read/wander/connect) drops
+     the reader straight at the end of the walk, where they left off */
+  // Capture the "go to the end" intent ONCE, then strip #arrival from the URL so that a
+  // later reload starts at the top instead of snapping back to the end every time.
+  var wantEnd = location.hash === "#arrival";
+  if (wantEnd && history.replaceState) {
+    history.replaceState(null, "", location.pathname + location.search);
+  }
+  function applyEntryScroll() {
+    window.scrollTo(0, wantEnd ? 1e7 : 0);   // 1e7 clamps to the true bottom
+    render();
+  }
+  applyEntryScroll();
+  window.addEventListener("load", applyEntryScroll);
+  window.addEventListener("pageshow", applyEntryScroll);
+  if (wantEnd) setTimeout(applyEntryScroll, 250);   // re-assert once layout settles
 })();
+

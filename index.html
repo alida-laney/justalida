@@ -1,14 +1,12 @@
 ---
-permalink: /trial/
-sitemap: false
+permalink: /
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>a walk · justalida</title>
+  <title>justalida · an autumn stroll</title>
   <link rel="stylesheet" href="{{ '/assets/css/walk.css' | relative_url }}">
 </head>
 <body class="walk-body">
@@ -35,6 +33,9 @@ sitemap: false
     <div class="sky sky--day"></div>
     <div class="sky sky--dusk"></div>
     <div class="sky sky--night"></div>
+
+    <!-- The pastel drawing, above the sky — fades in only at night's very end to peek through -->
+    <div class="texture"></div>
 
     <div class="stars" id="stars"></div>
 
@@ -160,7 +161,7 @@ sitemap: false
     <div class="layer layer--near" data-speed="1">
       <svg viewBox="0 0 5600 1100" preserveAspectRatio="xMidYMax slice">
         <rect x="0" y="980" width="5600" height="120" fill="var(--grass)"/>
-        <g transform="translate(320 0)">
+        <g transform="translate(140 0)">
           <rect x="-7" y="560" width="14" height="430" fill="var(--lamp-post)"/>
           <circle class="lamp-glow" cx="0" cy="550" r="17" fill="var(--lamp-glow)"/>
           <circle cx="0" cy="550" r="7" fill="var(--lamp-core)"/>
@@ -288,12 +289,14 @@ sitemap: false
       </div>
     </section>
 
-    <section class="station station--close">
+    <section class="station station--close" id="arrival">
       <div class="card card--mist">
         <p class="card-kind">arrival</p>
         <h2>The future holds?</h2>
         <p class="close-links">
-          <a href="#">read</a> · <a href="#">wander</a> · <a href="#">connect</a>
+          <a href="{{ '/read/' | relative_url }}">read</a> ·
+          <a href="{{ '/wander/' | relative_url }}">wander</a> ·
+          <a href="{{ '/connect/' | relative_url }}">connect</a>
         </p>
         <p class="footnote">enjoy the season, while she is with us</p>
       </div>
